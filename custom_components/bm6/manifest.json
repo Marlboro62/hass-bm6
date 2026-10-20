@@ -110,5 +110,5 @@
   "requirements": [
     "pycryptodome>=3.20.0"
   ],
-  "version": "2027.1.0-rc.1"
+  "version": "2027.1.0"
 }
