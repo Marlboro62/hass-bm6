@@ -44,7 +44,7 @@
         "error": {
             "max_less_than_min": "Den maksimale spændingsværdi skal være større end minimum.",
             "cvr_less_than_dvr": "CVR-værdien skal være højere end DVR-værdien.",
-            "soc_less_than_sod": "SOC-værdi skal være større end værdien af ​​SOD."
+            "soc_less_than_sod": "SOC-værdi skal være større end værdien af SOD."
         }
     },
     "options": {
@@ -89,7 +89,7 @@
             "required_field": "Dette felt er påkrævet.",
             "max_less_than_min": "Den maksimale spændingsværdi skal være større end minimum.",
             "cvr_less_than_dvr": "CVR-værdien skal være højere end DVR-værdien.",
-            "soc_less_than_sod": "SOC-værdi skal være større end værdien af ​​SOD."
+            "soc_less_than_sod": "SOC-værdi skal være større end værdien af SOD."
         }
     },
     "entity": {
