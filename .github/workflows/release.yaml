@@ -41,8 +41,13 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           notes=".github/release-notes/${TAG}.md"
+          args=(--target "$GITHUB_SHA" --title "$TAG")
+          # Une version avec suffixe (-rc.1, -beta.2…) est publiée en pré-release :
+          # HACS ne la propose qu'aux utilisateurs qui ont activé les bêtas.
+          case "$TAG" in *-*) args+=(--prerelease) ;; esac
           if [ -f "$notes" ]; then
-            gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --notes-file "$notes"
+            args+=(--notes-file "$notes")
           else
-            gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --generate-notes
+            args+=(--generate-notes)
           fi
+          gh release create "$TAG" "${args[@]}"

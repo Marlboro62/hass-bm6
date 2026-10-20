@@ -1,0 +1,21 @@
+name: Supprimer une release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag de la release à supprimer (ex. v2027.09.9)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  delete:
+    name: "Supprimer la release et son tag"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Supprimer"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release delete "${{ inputs.tag }}" --repo "$GITHUB_REPOSITORY" --cleanup-tag --yes
