@@ -11,7 +11,8 @@
                     "update_interval": "Intervali i azhurnimit të të dhënave",
                     "voltage_offset": "Korrigjim i tensionit",
                     "temperature_offset": "Korrigjim i temperaturës",
-                    "temperature_unit": "Njësi e temperaturës"
+                    "temperature_unit": "Njësi e temperaturës",
+                    "bluetooth_proxy": "Proxy Bluetooth"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "Konfigurimi i monitorit BM6",
                 "description": "Parametrat e konfigurimit të baterisë me porosi.",
                 "data": {
-                    "custom_dvr_min": "Tensioni minimal i shkarkimit (DVR)",
-                    "custom_dvr_max": "Tensioni maksimal i shkarkimit (DVR)",
-                    "custom_cvr_min": "Tensioni minimal i karikimit (CVR)",
-                    "custom_cvr_max": "Tensioni maksimal i karikimit (CVR)",
-                    "custom_soc_min": "Tensioni minimal i ngarkimit (SOC)",
-                    "custom_soc_max": "Tensioni maksimal i ngarkimit (SOC)",
-                    "custom_sod_min": "Tensioni minimal i shkarkimit (SOD)",
-                    "custom_sod_max": "Tensioni maksimal i ngarkimit (SOD)"
+                    "custom_dvr_min": "Intervali i shkarkimit (DVR): tensioni minimal",
+                    "custom_dvr_max": "Intervali i shkarkimit (DVR): tensioni maksimal",
+                    "custom_cvr_min": "Intervali i ngarkimit (CVR): tensioni minimal",
+                    "custom_cvr_max": "Intervali i ngarkimit (CVR): tensioni maksimal",
+                    "custom_soc_min": "Gjendja e ngarkimit (SoC): tensioni minimal",
+                    "custom_soc_max": "Gjendja e ngarkimit (SoC): tensioni maksimal",
+                    "custom_sod_min": "Gjendja e shkarkimit (SoD): tensioni minimal",
+                    "custom_sod_max": "Gjendja e shkarkimit (SoD): tensioni maksimal"
                 }
             }
         },
@@ -49,14 +50,15 @@
     "options": {
         "step": {
             "init": {
-                "title": "Ri -konfigurimi i monitorit BM6",
+                "title": "Ri-konfigurimi i monitorit BM6",
                 "description": "Parametrat themelorë të konfigurimit të pajisjes.",
                 "data": {
                     "state_algorithm": "Algoritmi i llogaritjes së baterisë",
                     "update_interval": "Intervali i azhurnimit të të dhënave",
                     "voltage_offset": "Korrigjim i tensionit",
                     "temperature_offset": "Korrigjim i temperaturës",
-                    "temperature_unit": "Njësi e temperaturës"
+                    "temperature_unit": "Njësi e temperaturës",
+                    "bluetooth_proxy": "Proxy Bluetooth"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "Konfigurimi i monitorit BM6",
                 "description": "Parametrat e konfigurimit të baterisë me porosi.",
                 "data": {
-                    "custom_dvr_min": "Tensioni minimal i shkarkimit (DVR)",
-                    "custom_dvr_max": "Tensioni maksimal i shkarkimit (DVR)",
-                    "custom_cvr_min": "Tensioni minimal i karikimit (CVR)",
-                    "custom_cvr_max": "Tensioni maksimal i karikimit (CVR)",
-                    "custom_soc_min": "Tensioni minimal i ngarkimit (SOC)",
-                    "custom_soc_max": "Tensioni maksimal i ngarkimit (SOC)",
-                    "custom_sod_min": "Tensioni minimal i shkarkimit (SOD)",
-                    "custom_sod_max": "Tensioni maksimal i ngarkimit (SOD)"
+                    "custom_dvr_min": "Intervali i shkarkimit (DVR): tensioni minimal",
+                    "custom_dvr_max": "Intervali i shkarkimit (DVR): tensioni maksimal",
+                    "custom_cvr_min": "Intervali i ngarkimit (CVR): tensioni minimal",
+                    "custom_cvr_max": "Intervali i ngarkimit (CVR): tensioni maksimal",
+                    "custom_soc_min": "Gjendja e ngarkimit (SoC): tensioni minimal",
+                    "custom_soc_max": "Gjendja e ngarkimit (SoC): tensioni maksimal",
+                    "custom_sod_min": "Gjendja e shkarkimit (SoD): tensioni minimal",
+                    "custom_sod_max": "Gjendja e shkarkimit (SoD): tensioni maksimal"
                 }
             }
         },
@@ -93,13 +95,13 @@
     "entity": {
         "sensor": {
             "voltage": {
-                "name": "Tension",
+                "name": "Tensioni",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Tension aktual"
+                        "name": "Tensioni i matur"
                     },
                     "voltage_corrected": {
-                        "name": "Tension i korrigjuar"
+                        "name": "Tensioni i korrigjuar"
                     }
                 }
             },
@@ -107,10 +109,10 @@
                 "name": "Temperaturë",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Temperaturë aktuale"
+                        "name": "Temperatura e matur"
                     },
                     "temperature_corrected": {
-                        "name": "Temperaturë e korrigjuar"
+                        "name": "Temperatura e korrigjuar"
                     },
                     "temperature_unit": {
                         "name": "Njësi e temperaturës"
@@ -118,81 +120,81 @@
                 }
             },
             "percentage": {
-                "name": "Përqindje",
+                "name": "Ngarkesa",
                 "state_attributes": {
                     "voltage_corrected": {
-                        "name": "Tension i korrigjuar"
+                        "name": "Tensioni i korrigjuar"
                     },
                     "percentage": {
-                        "name": "Përqindje"
+                        "name": "Ngarkesa"
                     },
                     "state_algorithm": {
                         "name": "Algoritmi i llogaritjes së baterisë",
                         "state": {
-                            "by_device": "Llogaritur nga pajisja BM6",
-                            "soc_sod": "Llogaritur nga gjendja/shkarkimi (SOC/SOD)",
-                            "cvr_dvr": "Llogaritur në tensionin e karikimit/shkarkimit (CVR/DVR)"
+                            "by_device": "Nga BM6",
+                            "soc_sod": "Gjendja e ngarkimit / shkarkimit (SoC/SoD)",
+                            "cvr_dvr": "Intervalet e tensionit të ngarkimit / shkarkimit (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Tensioni minimal i shkarkimit (DVR)"
+                        "name": "Intervali i shkarkimit (DVR): tensioni minimal"
                     },
                     "dvr_max": {
-                        "name": "Tensioni maksimal i shkarkimit (DVR)"
+                        "name": "Intervali i shkarkimit (DVR): tensioni maksimal"
                     },
                     "cvr_min": {
-                        "name": "Tensioni minimal i karikimit (CVR)"
+                        "name": "Intervali i ngarkimit (CVR): tensioni minimal"
                     },
                     "cvr_max": {
-                        "name": "Tensioni maksimal i karikimit (CVR)"
+                        "name": "Intervali i ngarkimit (CVR): tensioni maksimal"
                     },
                     "sod_min": {
-                        "name": "Tensioni minimal i shkarkimit (SOD)"
+                        "name": "Gjendja e shkarkimit (SoD): tensioni minimal"
                     },
                     "sod_max": {
-                        "name": "Tensioni maksimal i ngarkimit (SOD)"
+                        "name": "Gjendja e shkarkimit (SoD): tensioni maksimal"
                     },
                     "soc_min": {
-                        "name": "Tensioni minimal i ngarkimit (SOC)"
+                        "name": "Gjendja e ngarkimit (SoC): tensioni minimal"
                     },
                     "soc_max": {
-                        "name": "Tensioni maksimal i ngarkimit (SOC)"
+                        "name": "Gjendja e ngarkimit (SoC): tensioni maksimal"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Gjendja",
                 "state": {
-                    "unknown": "I panjohur",
-                    "ok": "I mirë",
+                    "unknown": "E panjohur",
+                    "ok": "Normale",
                     "low_voltage": "Tension i ulët",
-                    "under_voltage": "Tension shumë i ulët",
-                    "charging": "Ulje",
-                    "idle": "I papunë",
-                    "discharging": "Shkarkim",
-                    "over_voltage": "Tension shumë i lartë"
+                    "under_voltage": "Nëntension",
+                    "charging": "Po karikohet",
+                    "idle": "Në qetësi",
+                    "discharging": "Po shkarkohet",
+                    "over_voltage": "Mbitension"
                 }
             },
             "rssi": {
-                "name": "Forca e Sinjalit (RSSI)"
+                "name": "Fuqia e sinjalit"
             },
             "device_percentage": {
-                "name": "Përqindja e pajisjes"
+                "name": "Ngarkesa (BM6)"
             },
             "device_state": {
-                "name": "Gjendja e pajisjes",
+                "name": "Gjendja (BM6)",
                 "state": {
-                    "unknown": "I panjohur",
-                    "ok": "I mirë",
+                    "unknown": "E panjohur",
+                    "ok": "Normale",
                     "low_voltage": "Tension i ulët",
-                    "charging": "Ulje"
+                    "charging": "Po karikohet"
                 }
             },
             "rapid_acceleration": {
-                "name": "Nxitim"
+                "name": "Rritje e shpejtë e tensionit"
             },
             "rapid_deceleration": {
-                "name": "I ngadaltë"
+                "name": "Rënie e shpejtë e tensionit"
             },
             "bluetooth_scanner": {
                 "name": "Skaner Bluetooth"
@@ -202,54 +204,54 @@
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 volt",
-                "12v": "12 volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Acidi i përmbytur-Acid (FLA)",
-                "agm": "Mbërthimi i qelqit (AGM)",
-                "gel": "Qelizat xhel (xhel)",
-                "nicd": "Nikel-Cadmia (NICD)",
-                "nimh": "Uji i nikelit-metal (NIMH)",
-                "liion": "Litium-jon (li-jon)",
-                "lifepo4": "Fosfat i hekurit të litiumit (LIFEPO4)",
-                "lto": "Titanian i Vogël (LTO)",
-                "custom": "Bateri jo -standarde",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Plumb-acid me elektrolit të lëngët (FLA)",
+                "agm": "AGM (fibër qelqi absorbuese)",
+                "gel": "Xhel",
+                "efb": "EFB (start-stop)",
+                "nicd": "Nikel-kadmium (NiCd)",
+                "nimh": "Nikel-hidrid metali (NiMH)",
+                "liion": "Litium-jon (Li-ion)",
+                "lifepo4": "Litium-hekur-fosfat (LiFePO4)",
+                "lto": "Titanat litiumi (LTO)",
+                "custom": "E personalizuar"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Mbyllur nga pajisja BM6",
-                "soc_sod": "Pranues nga Shteti i Ndryshimit/Dërgimit (SOC/SOD)",
-                "cvr_dvr": "Karakteristika/Koha e dërgimit të Accesple (CVR/DVR)"
+                "by_device": "Nga BM6",
+                "soc_sod": "Gjendja e ngarkimit / shkarkimit (SoC/SoD)",
+                "cvr_dvr": "Intervalet e tensionit të ngarkimit / shkarkimit (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
-                "unknown": "I panjohur",
-                "ok": "I mirë",
+                "unknown": "E panjohur",
+                "ok": "Normale",
                 "low_voltage": "Tension i ulët",
-                "under_voltage": "Tension shumë i ulët",
-                "charging": "Ulje",
-                "idle": "I papunë",
-                "discharging": "Shkarkim",
-                "over_voltage": "Tension shumë i lartë"
+                "under_voltage": "Nëntension",
+                "charging": "Po karikohet",
+                "idle": "Në qetësi",
+                "discharging": "Po shkarkohet",
+                "over_voltage": "Mbitension"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "Filloi gjendja e OK",
-            "start_low_voltage": "Tensioni i ulët ka filluar",
-            "under_voltage": "Tension shumë i ulët",
-            "start_discharging": "Shkarkimi ka filluar",
-            "start_idle": "Mënyra boshe ka filluar",
-            "start_charging": "Filloi akuza",
-            "over_voltage": "Tension shumë i lartë",
-            "state_changed": "Shteti ka ndryshuar"
+            "start_ok": "Bëhet normale",
+            "start_low_voltage": "Kalon në tension të ulët",
+            "under_voltage": "Kalon në nëntension",
+            "start_discharging": "Fillon shkarkimi",
+            "start_idle": "Kalon në qetësi",
+            "start_charging": "Fillon karikimi",
+            "over_voltage": "Kalon në mbitension",
+            "state_changed": "Gjendja ndryshon"
         }
     }
 }

@@ -3,7 +3,7 @@
     "config": {
         "step": {
             "user": {
-                "title": "Konfiguration af den nye BM6 -skærm",
+                "title": "Konfiguration af den nye BM6-skærm",
                 "description": "Grundlæggende enhedskonfigurationsparametre.",
                 "data": {
                     "device_address": "Navn/adresse BM6",
@@ -11,11 +11,12 @@
                     "update_interval": "Dataopdateringsinterval",
                     "voltage_offset": "Spændingskorrektion",
                     "temperature_offset": "Temperaturkorrektion",
-                    "temperature_unit": "Temperaturenhed"
+                    "temperature_unit": "Temperaturenhed",
+                    "bluetooth_proxy": "Bluetooth-proxy"
                 }
             },
             "custom_calculation": {
-                "title": "Konfiguration af den nye BM6 -skærm",
+                "title": "Konfiguration af den nye BM6-skærm",
                 "description": "Parametre for batterikonfiguration.",
                 "data": {
                     "battery_voltage": "Batterispænding",
@@ -26,41 +27,42 @@
                 "title": "BM6 Monitor Configuration",
                 "description": "Brugerdefinerede batterikonfigurationsparametre.",
                 "data": {
-                    "custom_dvr_min": "Minimum losningsspænding (DVR)",
-                    "custom_dvr_max": "Maksimal losningsspænding (DVR)",
-                    "custom_cvr_min": "Minimum opladningsspænding (CVR)",
-                    "custom_cvr_max": "Maksimal opladningsspænding (CVR)",
-                    "custom_soc_min": "Minimumsafgiftsspænding (SOC)",
-                    "custom_soc_max": "Maksimal ladningsspænding (SOC)",
-                    "custom_sod_min": "Minimum udladningsspænding (SOD)",
-                    "custom_sod_max": "Maksimal ladningsspænding (SOD)"
+                    "custom_dvr_min": "Afladningsområde (DVR): minimumsspænding",
+                    "custom_dvr_max": "Afladningsområde (DVR): maksimumsspænding",
+                    "custom_cvr_min": "Opladningsområde (CVR): minimumsspænding",
+                    "custom_cvr_max": "Opladningsområde (CVR): maksimumsspænding",
+                    "custom_soc_min": "Opladningstilstand (SoC): minimumsspænding",
+                    "custom_soc_max": "Opladningstilstand (SoC): maksimumsspænding",
+                    "custom_sod_min": "Afladningstilstand (SoD): minimumsspænding",
+                    "custom_sod_max": "Afladningstilstand (SoD): maksimumsspænding"
                 }
             }
         },
         "abort": {
-            "no_devices_found": "Ingen BM6 -enheder blev fundet."
+            "no_devices_found": "Ingen BM6-enheder blev fundet."
         },
         "error": {
             "max_less_than_min": "Den maksimale spændingsværdi skal være større end minimum.",
-            "cvr_less_than_dvr": "CVR -værdien skal være højere end DVR -værdien.",
-            "soc_less_than_sod": "SOC -værdi skal være større end værdien af ​​SOD."
+            "cvr_less_than_dvr": "CVR-værdien skal være højere end DVR-værdien.",
+            "soc_less_than_sod": "SOC-værdi skal være større end værdien af ​​SOD."
         }
     },
     "options": {
         "step": {
             "init": {
-                "title": "Re -konfiguration af BM6 -skærmen",
+                "title": "Re-konfiguration af BM6-skærmen",
                 "description": "Grundlæggende enhedskonfigurationsparametre.",
                 "data": {
                     "state_algorithm": "Batteri beregningsalgoritme",
                     "update_interval": "Dataopdateringsinterval",
                     "voltage_offset": "Spændingskorrektion",
                     "temperature_offset": "Temperaturkorrektion",
-                    "temperature_unit": "Temperaturenhed"
+                    "temperature_unit": "Temperaturenhed",
+                    "bluetooth_proxy": "Bluetooth-proxy"
                 }
             },
             "custom_calculation": {
-                "title": "Konfiguration af den nye BM6 -skærm",
+                "title": "Konfiguration af den nye BM6-skærm",
                 "description": "Parametre for batterikonfiguration.",
                 "data": {
                     "battery_voltage": "Batterispænding",
@@ -71,14 +73,14 @@
                 "title": "BM6 Monitor Configuration",
                 "description": "Brugerdefinerede batterikonfigurationsparametre.",
                 "data": {
-                    "custom_dvr_min": "Minimum losningsspænding (DVR)",
-                    "custom_dvr_max": "Maksimal losningsspænding (DVR)",
-                    "custom_cvr_min": "Minimum opladningsspænding (CVR)",
-                    "custom_cvr_max": "Maksimal opladningsspænding (CVR)",
-                    "custom_soc_min": "Minimumsafgiftsspænding (SOC)",
-                    "custom_soc_max": "Maksimal ladningsspænding (SOC)",
-                    "custom_sod_min": "Minimum udladningsspænding (SOD)",
-                    "custom_sod_max": "Maksimal ladningsspænding (SOD)"
+                    "custom_dvr_min": "Afladningsområde (DVR): minimumsspænding",
+                    "custom_dvr_max": "Afladningsområde (DVR): maksimumsspænding",
+                    "custom_cvr_min": "Opladningsområde (CVR): minimumsspænding",
+                    "custom_cvr_max": "Opladningsområde (CVR): maksimumsspænding",
+                    "custom_soc_min": "Opladningstilstand (SoC): minimumsspænding",
+                    "custom_soc_max": "Opladningstilstand (SoC): maksimumsspænding",
+                    "custom_sod_min": "Afladningstilstand (SoD): minimumsspænding",
+                    "custom_sod_max": "Afladningstilstand (SoD): maksimumsspænding"
                 }
             }
         },
@@ -86,8 +88,8 @@
             "invalid_input": "Forkerte inputdata.",
             "required_field": "Dette felt er påkrævet.",
             "max_less_than_min": "Den maksimale spændingsværdi skal være større end minimum.",
-            "cvr_less_than_dvr": "CVR -værdien skal være højere end DVR -værdien.",
-            "soc_less_than_sod": "SOC -værdi skal være større end værdien af ​​SOD."
+            "cvr_less_than_dvr": "CVR-værdien skal være højere end DVR-værdien.",
+            "soc_less_than_sod": "SOC-værdi skal være større end værdien af ​​SOD."
         }
     },
     "entity": {
@@ -96,7 +98,7 @@
                 "name": "Spænding",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Faktisk spænding"
+                        "name": "Målt spænding"
                     },
                     "voltage_corrected": {
                         "name": "Korrigeret spænding"
@@ -107,7 +109,7 @@
                 "name": "Temperatur",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Faktisk temperatur"
+                        "name": "Målt temperatur"
                     },
                     "temperature_corrected": {
                         "name": "Korrigeret temperatur"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Procent",
+                "name": "Ladeniveau",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Korrigeret spænding"
                     },
                     "percentage": {
-                        "name": "Procent"
+                        "name": "Ladeniveau"
                     },
                     "state_algorithm": {
                         "name": "Batteri beregningsalgoritme",
                         "state": {
-                            "by_device": "Beregnet af BM6 -enheden",
-                            "soc_sod": "Beregnet ud fra ladningstilstanden/decharge (SOC/SOD)",
-                            "cvr_dvr": "Beregnet ved opladning/udladningsspænding (CVR/DVR)"
+                            "by_device": "Leveret af BM6",
+                            "soc_sod": "Opladnings-/afladningstilstand (SoC/SoD)",
+                            "cvr_dvr": "Spændingsområder for opladning/afladning (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minimum losningsspænding (DVR)"
+                        "name": "Afladningsområde (DVR): minimumsspænding"
                     },
                     "dvr_max": {
-                        "name": "Maksimal losningsspænding (DVR)"
+                        "name": "Afladningsområde (DVR): maksimumsspænding"
                     },
                     "cvr_min": {
-                        "name": "Minimum opladningsspænding (CVR)"
+                        "name": "Opladningsområde (CVR): minimumsspænding"
                     },
                     "cvr_max": {
-                        "name": "Maksimal opladningsspænding (CVR)"
+                        "name": "Opladningsområde (CVR): maksimumsspænding"
                     },
                     "sod_min": {
-                        "name": "Minimum udladningsspænding (SOD)"
+                        "name": "Afladningstilstand (SoD): minimumsspænding"
                     },
                     "sod_max": {
-                        "name": "Maksimal ladningsspænding (SOD)"
+                        "name": "Afladningstilstand (SoD): maksimumsspænding"
                     },
                     "soc_min": {
-                        "name": "Minimumsafgiftsspænding (SOC)"
+                        "name": "Opladningstilstand (SoC): minimumsspænding"
                     },
                     "soc_max": {
-                        "name": "Maksimal ladningsspænding (SOC)"
+                        "name": "Opladningstilstand (SoC): maksimumsspænding"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Tilstand",
                 "state": {
                     "unknown": "Ukendt",
-                    "ok": "OK",
+                    "ok": "Normal",
                     "low_voltage": "Lav spænding",
-                    "under_voltage": "For lav spænding",
-                    "charging": "Landing",
-                    "idle": "Ledig",
-                    "discharging": "Losning",
-                    "over_voltage": "For høj spænding"
+                    "under_voltage": "Underspænding",
+                    "charging": "Oplader",
+                    "idle": "Hvile",
+                    "discharging": "Aflader",
+                    "over_voltage": "Overspænding"
                 }
             },
             "rssi": {
-                "name": "Signalkraft (RSSI)"
+                "name": "Signalstyrke"
             },
             "device_percentage": {
-                "name": "Procentdel af enheden"
+                "name": "Ladeniveau (BM6)"
             },
             "device_state": {
-                "name": "Enhedens tilstand",
+                "name": "Tilstand (BM6)",
                 "state": {
                     "unknown": "Ukendt",
-                    "ok": "OK",
+                    "ok": "Normal",
                     "low_voltage": "Lav spænding",
-                    "charging": "Landing"
+                    "charging": "Oplader"
                 }
             },
             "rapid_acceleration": {
-                "name": "Acceleration"
+                "name": "Hurtig spændingsstigning"
             },
             "rapid_deceleration": {
-                "name": "Langsomhed"
+                "name": "Hurtigt spændingsfald"
             },
             "bluetooth_scanner": {
-                "name": "Skaner Bluetooth"
+                "name": "Bluetooth-scanner"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 volt",
-                "12v": "12 volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Oversvømmet syre-alley (FLA)",
-                "agm": "Absorberende glasmåtte (AGM)",
-                "gel": "Gelceller (gel)",
-                "nicd": "Nickel-Cadmia (NICD)",
-                "nimh": "Nickel-Metal-Water (NIMH)",
+                "fla": "Våd blysyre (FLA)",
+                "agm": "AGM (absorberende glasmåtte)",
+                "gel": "Gel",
+                "efb": "EFB (start-stop)",
+                "nicd": "Nikkel-cadmium (NiCd)",
+                "nimh": "Nikkel-metalhydrid (NiMH)",
                 "liion": "Lithium-ion (Li-ion)",
-                "lifepo4": "Lithium Iron Phosphate (LIFEPO4)",
-                "lto": "Lille Titanian (LTO)",
-                "custom": "Ikke -standard batteri",
-                "efb": "Enhanced flooded battery (EFB)"
+                "lifepo4": "Lithium-jernfosfat (LiFePO4)",
+                "lto": "Lithiumtitanat (LTO)",
+                "custom": "Brugerdefineret"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Lukket af BM6 -enheden",
-                "soc_sod": "Acceptor fra ændringen/afsendelse af tilstand (SOC/SOD)",
-                "cvr_dvr": "Acceple Charaction/Sending Time (CVR/DVR)"
+                "by_device": "Leveret af BM6",
+                "soc_sod": "Opladnings-/afladningstilstand (SoC/SoD)",
+                "cvr_dvr": "Spændingsområder for opladning/afladning (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Ukendt",
-                "ok": "OK",
+                "ok": "Normal",
                 "low_voltage": "Lav spænding",
-                "under_voltage": "For lav spænding",
-                "charging": "Landing",
-                "idle": "Ledig",
-                "discharging": "Losning",
-                "over_voltage": "For høj spænding"
+                "under_voltage": "Underspænding",
+                "charging": "Oplader",
+                "idle": "Hvile",
+                "discharging": "Aflader",
+                "over_voltage": "Overspænding"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "OK's tilstand begyndte",
-            "start_low_voltage": "Lav spænding er begyndt",
-            "under_voltage": "For lav spænding",
-            "start_discharging": "Losning er begyndt",
-            "start_idle": "Den ledige tilstand er begyndt",
-            "start_charging": "Opladningen begyndte",
-            "over_voltage": "For høj spænding",
-            "state_changed": "Staten har ændret sig"
+            "start_ok": "Bliver normal",
+            "start_low_voltage": "Får lav spænding",
+            "under_voltage": "Får underspænding",
+            "start_discharging": "Begynder at aflade",
+            "start_idle": "Går i hvile",
+            "start_charging": "Begynder at oplade",
+            "over_voltage": "Får overspænding",
+            "state_changed": "Tilstanden ændres"
         }
     }
 }

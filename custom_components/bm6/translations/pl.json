@@ -11,7 +11,8 @@
                     "update_interval": "Interwał aktualizacji danych",
                     "voltage_offset": "Korekta napięcia",
                     "temperature_offset": "Korekta temperatury",
-                    "temperature_unit": "Jednostka temperatury"
+                    "temperature_unit": "Jednostka temperatury",
+                    "bluetooth_proxy": "Proxy Bluetooth"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "Konfiguracja monitora BM6",
                 "description": "Parametry konfiguracji niestandardowej baterii.",
                 "data": {
-                    "custom_dvr_min": "Minimalne napięcie rozładowywania (DVR)",
-                    "custom_dvr_max": "Maksymalne napięcie rozładowywania (DVR)",
-                    "custom_cvr_min": "Minimalne napięcie ładowania (CVR)",
-                    "custom_cvr_max": "Maksymalne napięcie ładowania (CVR)",
-                    "custom_soc_min": "Minimalne napięcie stanu naładowania (SoC)",
-                    "custom_soc_max": "Maksymalne napięcie stanu naładowania (SoC)",
-                    "custom_sod_min": "Minimalne napięcie stanu rozładowania (SoD)",
-                    "custom_sod_max": "Maksymalne napięcie stanu naładowania (SoD)"
+                    "custom_dvr_min": "Zakres rozładowania (DVR): napięcie minimalne",
+                    "custom_dvr_max": "Zakres rozładowania (DVR): napięcie maksymalne",
+                    "custom_cvr_min": "Zakres ładowania (CVR): napięcie minimalne",
+                    "custom_cvr_max": "Zakres ładowania (CVR): napięcie maksymalne",
+                    "custom_soc_min": "Stan naładowania (SoC): napięcie minimalne",
+                    "custom_soc_max": "Stan naładowania (SoC): napięcie maksymalne",
+                    "custom_sod_min": "Stan rozładowania (SoD): napięcie minimalne",
+                    "custom_sod_max": "Stan rozładowania (SoD): napięcie maksymalne"
                 }
             }
         },
@@ -56,7 +57,8 @@
                     "update_interval": "Interwał aktualizacji danych",
                     "voltage_offset": "Korekta napięcia",
                     "temperature_offset": "Korekta temperatury",
-                    "temperature_unit": "Jednostka temperatury"
+                    "temperature_unit": "Jednostka temperatury",
+                    "bluetooth_proxy": "Proxy Bluetooth"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "Konfiguracja monitora BM6",
                 "description": "Parametry konfiguracji niestandardowej baterii.",
                 "data": {
-                    "custom_dvr_min": "Minimalne napięcie rozładowywania (DVR)",
-                    "custom_dvr_max": "Maksymalne napięcie rozładowywania (DVR)",
-                    "custom_cvr_min": "Minimalne napięcie ładowania (CVR)",
-                    "custom_cvr_max": "Maksymalne napięcie ładowania (CVR)",
-                    "custom_soc_min": "Minimalne napięcie stanu naładowania (SoC)",
-                    "custom_soc_max": "Maksymalne napięcie stanu naładowania (SoC)",
-                    "custom_sod_min": "Minimalne napięcie stanu rozładowania (SoD)",
-                    "custom_sod_max": "Maksymalne napięcie stanu naładowania (SoD)"
+                    "custom_dvr_min": "Zakres rozładowania (DVR): napięcie minimalne",
+                    "custom_dvr_max": "Zakres rozładowania (DVR): napięcie maksymalne",
+                    "custom_cvr_min": "Zakres ładowania (CVR): napięcie minimalne",
+                    "custom_cvr_max": "Zakres ładowania (CVR): napięcie maksymalne",
+                    "custom_soc_min": "Stan naładowania (SoC): napięcie minimalne",
+                    "custom_soc_max": "Stan naładowania (SoC): napięcie maksymalne",
+                    "custom_sod_min": "Stan rozładowania (SoD): napięcie minimalne",
+                    "custom_sod_max": "Stan rozładowania (SoD): napięcie maksymalne"
                 }
             }
         },
@@ -96,7 +98,7 @@
                 "name": "Napięcie",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Rzeczywiste napięcie"
+                        "name": "Zmierzone napięcie"
                     },
                     "voltage_corrected": {
                         "name": "Skorygowane napięcie"
@@ -107,7 +109,7 @@
                 "name": "Temperatura",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Rzeczywista temperatura"
+                        "name": "Zmierzona temperatura"
                     },
                     "temperature_corrected": {
                         "name": "Skorygowana temperatura"
@@ -118,45 +120,45 @@
                 }
             },
             "percentage": {
-                "name": "Procent",
+                "name": "Naładowanie",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Skorygowane napięcie"
                     },
                     "percentage": {
-                        "name": "Procent"
+                        "name": "Naładowanie"
                     },
                     "state_algorithm": {
                         "name": "Algorytm wyliczania stanu baterii",
                         "state": {
-                            "by_device": "Obliczany przez urządzenie BM6",
-                            "soc_sod": "Obliczany ze stanu naładowania/rozładowania (SoC/SoD)",
-                            "cvr_dvr": "Obliczany z zakresu napięć ładowania/rozładowania (CVR/DVR)"
+                            "by_device": "Podawany przez BM6",
+                            "soc_sod": "Stan naładowania / rozładowania (SoC/SoD)",
+                            "cvr_dvr": "Zakresy napięć ładowania / rozładowania (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minimalne napięcie rozładowywania (DVR)"
+                        "name": "Zakres rozładowania (DVR): napięcie minimalne"
                     },
                     "dvr_max": {
-                        "name": "Maksymalne napięcie rozładowywania (DVR)"
+                        "name": "Zakres rozładowania (DVR): napięcie maksymalne"
                     },
                     "cvr_min": {
-                        "name": "Minimalne napięcie ładowania (CVR)"
+                        "name": "Zakres ładowania (CVR): napięcie minimalne"
                     },
                     "cvr_max": {
-                        "name": "Maksymalne napięcie ładowania (CVR)"
+                        "name": "Zakres ładowania (CVR): napięcie maksymalne"
                     },
                     "sod_min": {
-                        "name": "Minimalne napięcie stanu rozładowania (SoD)"
+                        "name": "Stan rozładowania (SoD): napięcie minimalne"
                     },
                     "sod_max": {
-                        "name": "Maksymalne napięcie stanu naładowania (SoD)"
+                        "name": "Stan rozładowania (SoD): napięcie maksymalne"
                     },
                     "soc_min": {
-                        "name": "Minimalne napięcie stanu naładowania (SoC)"
+                        "name": "Stan naładowania (SoC): napięcie minimalne"
                     },
                     "soc_max": {
-                        "name": "Maksymalne napięcie stanu naładowania (SoC)"
+                        "name": "Stan naładowania (SoC): napięcie maksymalne"
                     }
                 }
             },
@@ -164,35 +166,35 @@
                 "name": "Stan",
                 "state": {
                     "unknown": "Nieznany",
-                    "ok": "OK",
+                    "ok": "Normalny",
                     "low_voltage": "Niskie napięcie",
-                    "under_voltage": "Za niskie napięcie",
+                    "under_voltage": "Podnapięcie",
                     "charging": "Ładowanie",
-                    "idle": "Bezczynny",
+                    "idle": "Spoczynek",
                     "discharging": "Rozładowywanie",
-                    "over_voltage": "Zbyt wysokie napięcie"
+                    "over_voltage": "Przepięcie"
                 }
             },
             "rssi": {
-                "name": "Siła sygnału (RSSI)"
+                "name": "Siła sygnału"
             },
             "device_percentage": {
-                "name": "Procent w/g urządzenia"
+                "name": "Naładowanie (BM6)"
             },
             "device_state": {
-                "name": "Stan w/g urządzenia",
+                "name": "Stan (BM6)",
                 "state": {
                     "unknown": "Nieznany",
-                    "ok": "OK",
+                    "ok": "Normalny",
                     "low_voltage": "Niskie napięcie",
                     "charging": "Ładowanie"
                 }
             },
             "rapid_acceleration": {
-                "name": "Przyspieszenie"
+                "name": "Szybki wzrost napięcia"
             },
             "rapid_deceleration": {
-                "name": "Spowolnienie"
+                "name": "Szybki spadek napięcia"
             },
             "bluetooth_scanner": {
                 "name": "Skaner Bluetooth"
@@ -202,54 +204,54 @@
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 Volt",
-                "12v": "12 Volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Zalewana Kwasowo-ołowiowa (FLA)",
-                "agm": "Absorbująca mata szklana (AGM)",
-                "gel": "Ogniwa żelowe (GEL)",
-                "nicd": "Niklowo-kadmowa (NiCd)",
-                "nimh": "Niklowo-metalowo-wodorkowa (NiMH)",
-                "liion": "Litowo-jonowa (Li-Ion)",
-                "lifepo4": "Fosforan żelaza litowego (LiFePO4)",
-                "lto": "Tytanian litowy (LTO)",
-                "custom": "Bateria niestandardowa",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Kwasowo-ołowiowy zalewany (FLA)",
+                "agm": "AGM (mata szklana)",
+                "gel": "Żelowy (GEL)",
+                "efb": "EFB (start-stop)",
+                "nicd": "Niklowo-kadmowy (NiCd)",
+                "nimh": "Niklowo-metalowo-wodorkowy (NiMH)",
+                "liion": "Litowo-jonowy (Li-Ion)",
+                "lifepo4": "Litowo-żelazowo-fosforanowy (LiFePO4)",
+                "lto": "Litowo-tytanowy (LTO)",
+                "custom": "Niestandardowy"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Oblczany przez urządzenie BM6",
-                "soc_sod": "Obliczny ze stanu naładowania/rozładowania (SoC/SoD)",
-                "cvr_dvr": "Obliczny z zakresu napięć ładowania/rozładowania (CVR/DVR)"
+                "by_device": "Podawany przez BM6",
+                "soc_sod": "Stan naładowania / rozładowania (SoC/SoD)",
+                "cvr_dvr": "Zakresy napięć ładowania / rozładowania (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Nieznany",
-                "ok": "OK",
+                "ok": "Normalny",
                 "low_voltage": "Niskie napięcie",
-                "under_voltage": "Za niskie napięcie",
+                "under_voltage": "Podnapięcie",
                 "charging": "Ładowanie",
-                "idle": "Bezczynny",
+                "idle": "Spoczynek",
                 "discharging": "Rozładowywanie",
-                "over_voltage": "Zbyt wysokie napięcie"
+                "over_voltage": "Przepięcie"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "Rozpoczęto stan OK",
-            "start_low_voltage": "Rozpoczęto stan niskie napięcie",
-            "under_voltage": "Za niskie napięcie",
-            "start_discharging": "Rozpoczęto rozładowywanie",
-            "start_idle": "Rozpoczęto tryb bezczynny",
-            "start_charging": "Rozpoczęto ładowanie",
-            "over_voltage": "Zbyt wysokie napięcie",
-            "state_changed": "Zmienił się stan"
+            "start_ok": "Przechodzi w stan normalny",
+            "start_low_voltage": "Przechodzi w niskie napięcie",
+            "under_voltage": "Przechodzi w podnapięcie",
+            "start_discharging": "Zaczyna się rozładowywać",
+            "start_idle": "Przechodzi w spoczynek",
+            "start_charging": "Zaczyna się ładować",
+            "over_voltage": "Przechodzi w przepięcie",
+            "state_changed": "Stan się zmienia"
         }
     }
 }

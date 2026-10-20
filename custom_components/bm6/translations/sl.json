@@ -11,7 +11,8 @@
                     "update_interval": "Interval posodobitve podatkov",
                     "voltage_offset": "Korekcija napetosti",
                     "temperature_offset": "Popravek temperature",
-                    "temperature_unit": "Temperaturna enota"
+                    "temperature_unit": "Temperaturna enota",
+                    "bluetooth_proxy": "Bluetooth proxy"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "Konfiguracija monitorja BM6",
                 "description": "Parametri konfiguracije baterije po meri.",
                 "data": {
-                    "custom_dvr_min": "Minimalna napetost za razkladanje (DVR)",
-                    "custom_dvr_max": "Največja napetost za razkladanje (DVR)",
-                    "custom_cvr_min": "Minimalna polnilna napetost (CVR)",
-                    "custom_cvr_max": "Največja polnilna napetost (CVR)",
-                    "custom_soc_min": "Minimalna napetost naboja (SOC)",
-                    "custom_soc_max": "Največja napetost naboja (SOC)",
-                    "custom_sod_min": "Minimalna napetost praznjenja (SOD)",
-                    "custom_sod_max": "Največja napetost naboja (SOD)"
+                    "custom_dvr_min": "Razpon praznjenja (DVR): najmanjša napetost",
+                    "custom_dvr_max": "Razpon praznjenja (DVR): največja napetost",
+                    "custom_cvr_min": "Razpon polnjenja (CVR): najmanjša napetost",
+                    "custom_cvr_max": "Razpon polnjenja (CVR): največja napetost",
+                    "custom_soc_min": "Stanje napolnjenosti (SoC): najmanjša napetost",
+                    "custom_soc_max": "Stanje napolnjenosti (SoC): največja napetost",
+                    "custom_sod_min": "Stanje izpraznjenosti (SoD): najmanjša napetost",
+                    "custom_sod_max": "Stanje izpraznjenosti (SoD): največja napetost"
                 }
             }
         },
@@ -56,7 +57,8 @@
                     "update_interval": "Interval posodobitve podatkov",
                     "voltage_offset": "Korekcija napetosti",
                     "temperature_offset": "Popravek temperature",
-                    "temperature_unit": "Temperaturna enota"
+                    "temperature_unit": "Temperaturna enota",
+                    "bluetooth_proxy": "Bluetooth proxy"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "Konfiguracija monitorja BM6",
                 "description": "Parametri konfiguracije baterije po meri.",
                 "data": {
-                    "custom_dvr_min": "Minimalna napetost za razkladanje (DVR)",
-                    "custom_dvr_max": "Največja napetost za razkladanje (DVR)",
-                    "custom_cvr_min": "Minimalna polnilna napetost (CVR)",
-                    "custom_cvr_max": "Največja polnilna napetost (CVR)",
-                    "custom_soc_min": "Minimalna napetost naboja (SOC)",
-                    "custom_soc_max": "Največja napetost naboja (SOC)",
-                    "custom_sod_min": "Minimalna napetost praznjenja (SOD)",
-                    "custom_sod_max": "Največja napetost naboja (SOD)"
+                    "custom_dvr_min": "Razpon praznjenja (DVR): najmanjša napetost",
+                    "custom_dvr_max": "Razpon praznjenja (DVR): največja napetost",
+                    "custom_cvr_min": "Razpon polnjenja (CVR): najmanjša napetost",
+                    "custom_cvr_max": "Razpon polnjenja (CVR): največja napetost",
+                    "custom_soc_min": "Stanje napolnjenosti (SoC): najmanjša napetost",
+                    "custom_soc_max": "Stanje napolnjenosti (SoC): največja napetost",
+                    "custom_sod_min": "Stanje izpraznjenosti (SoD): najmanjša napetost",
+                    "custom_sod_max": "Stanje izpraznjenosti (SoD): največja napetost"
                 }
             }
         },
@@ -96,7 +98,7 @@
                 "name": "Napetost",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Dejanska napetost"
+                        "name": "Izmerjena napetost"
                     },
                     "voltage_corrected": {
                         "name": "Popravljena napetost"
@@ -107,7 +109,7 @@
                 "name": "Temperatura",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Dejanska temperatura"
+                        "name": "Izmerjena temperatura"
                     },
                     "temperature_corrected": {
                         "name": "Popravljena temperatura"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Odstotek",
+                "name": "Napolnjenost",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Popravljena napetost"
                     },
                     "percentage": {
-                        "name": "Odstotek"
+                        "name": "Napolnjenost"
                     },
                     "state_algorithm": {
                         "name": "Algoritem za izračun baterije",
                         "state": {
-                            "by_device": "Izračunano s pomočjo naprave BM6",
-                            "soc_sod": "Izračunano iz stanja naboja/odvajanja (SOC/SOD)",
-                            "cvr_dvr": "Izračunano v napetosti polnjenja/praznjenja (CVR/DVR)"
+                            "by_device": "Sporoča BM6",
+                            "soc_sod": "Stanje napolnjenosti / izpraznjenosti (SoC/SoD)",
+                            "cvr_dvr": "Razponi napetosti polnjenja / praznjenja (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minimalna napetost za razkladanje (DVR)"
+                        "name": "Razpon praznjenja (DVR): najmanjša napetost"
                     },
                     "dvr_max": {
-                        "name": "Največja napetost za razkladanje (DVR)"
+                        "name": "Razpon praznjenja (DVR): največja napetost"
                     },
                     "cvr_min": {
-                        "name": "Minimalna polnilna napetost (CVR)"
+                        "name": "Razpon polnjenja (CVR): najmanjša napetost"
                     },
                     "cvr_max": {
-                        "name": "Največja polnilna napetost (CVR)"
+                        "name": "Razpon polnjenja (CVR): največja napetost"
                     },
                     "sod_min": {
-                        "name": "Minimalna napetost praznjenja (SOD)"
+                        "name": "Stanje izpraznjenosti (SoD): najmanjša napetost"
                     },
                     "sod_max": {
-                        "name": "Največja napetost naboja (SOD)"
+                        "name": "Stanje izpraznjenosti (SoD): največja napetost"
                     },
                     "soc_min": {
-                        "name": "Minimalna napetost naboja (SOC)"
+                        "name": "Stanje napolnjenosti (SoC): najmanjša napetost"
                     },
                     "soc_max": {
-                        "name": "Največja napetost naboja (SOC)"
+                        "name": "Stanje napolnjenosti (SoC): največja napetost"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Stanje",
                 "state": {
                     "unknown": "Neznano",
-                    "ok": "Ok",
+                    "ok": "Normalno",
                     "low_voltage": "Nizka napetost",
-                    "under_voltage": "Prenizko napetost",
-                    "charging": "Pristanek",
-                    "idle": "V prostem teku",
-                    "discharging": "Raztovarjanje",
-                    "over_voltage": "Previsoka napetost"
+                    "under_voltage": "Podnapetost",
+                    "charging": "Polnjenje",
+                    "idle": "Mirovanje",
+                    "discharging": "Praznjenje",
+                    "over_voltage": "Prenapetost"
                 }
             },
             "rssi": {
-                "name": "Signalna sila (RSSI)"
+                "name": "Moč signala"
             },
             "device_percentage": {
-                "name": "Odstotek naprave"
+                "name": "Napolnjenost (BM6)"
             },
             "device_state": {
-                "name": "Stanje naprave",
+                "name": "Stanje (BM6)",
                 "state": {
                     "unknown": "Neznano",
-                    "ok": "Ok",
+                    "ok": "Normalno",
                     "low_voltage": "Nizka napetost",
-                    "charging": "Pristanek"
+                    "charging": "Polnjenje"
                 }
             },
             "rapid_acceleration": {
-                "name": "Pospešek"
+                "name": "Hiter dvig napetosti"
             },
             "rapid_deceleration": {
-                "name": "Pojetnost"
+                "name": "Hiter padec napetosti"
             },
             "bluetooth_scanner": {
-                "name": "Skaner Bluetooth"
+                "name": "Bluetooth skener"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 voltov",
-                "12v": "12 voltov"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Poplavljena kislina (FLA)",
-                "agm": "Absorbirajoča steklena preproga (AGM)",
-                "gel": "Gel celice (gel)",
-                "nicd": "Nikelj-kadmija (NICD)",
-                "nimh": "Nikelj-kovinska voda (NIMH)",
-                "liion": "Litij-ion (li-ion)",
-                "lifepo4": "Litijev železni fosfat (LifePO4)",
-                "lto": "Mali Titanian (LTO)",
-                "custom": "Ne -standardna baterija",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Svinčeno-kislinska mokra (FLA)",
+                "agm": "AGM (vpojna steklena vlakna)",
+                "gel": "Gel",
+                "efb": "EFB (start-stop)",
+                "nicd": "Nikelj-kadmij (NiCd)",
+                "nimh": "Nikelj-metal hidrid (NiMH)",
+                "liion": "Litij-ionska (Li-ion)",
+                "lifepo4": "Litij-železov fosfat (LiFePO4)",
+                "lto": "Litij-titanat (LTO)",
+                "custom": "Po meri"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Zaprta z naprava BM6",
-                "soc_sod": "Acceptor iz države za spremembo/pošiljanje (SoC/SOD)",
-                "cvr_dvr": "ACCEPE Charaction/Čas pošiljanja (CVR/DVR)"
+                "by_device": "Sporoča BM6",
+                "soc_sod": "Stanje napolnjenosti / izpraznjenosti (SoC/SoD)",
+                "cvr_dvr": "Razponi napetosti polnjenja / praznjenja (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Neznano",
-                "ok": "Ok",
+                "ok": "Normalno",
                 "low_voltage": "Nizka napetost",
-                "under_voltage": "Prenizko napetost",
-                "charging": "Pristanek",
-                "idle": "V prostem teku",
-                "discharging": "Raztovarjanje",
-                "over_voltage": "Previsoka napetost"
+                "under_voltage": "Podnapetost",
+                "charging": "Polnjenje",
+                "idle": "Mirovanje",
+                "discharging": "Praznjenje",
+                "over_voltage": "Prenapetost"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "OK se je začel",
-            "start_low_voltage": "Začela se je nizka napetost",
-            "under_voltage": "Prenizko napetost",
-            "start_discharging": "Začelo se je razkladanje",
-            "start_idle": "Način v prostem teku se je začel",
-            "start_charging": "Začelo se je polnjenje",
-            "over_voltage": "Previsoka napetost",
-            "state_changed": "Država se je spremenila"
+            "start_ok": "Preide v normalno",
+            "start_low_voltage": "Preide v nizko napetost",
+            "under_voltage": "Preide v podnapetost",
+            "start_discharging": "Začne se prazniti",
+            "start_idle": "Preide v mirovanje",
+            "start_charging": "Začne se polniti",
+            "over_voltage": "Preide v prenapetost",
+            "state_changed": "Stanje se spremeni"
         }
     }
 }

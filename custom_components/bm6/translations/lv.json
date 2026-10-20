@@ -11,7 +11,8 @@
                     "update_interval": "Datu atjaunināšanas intervāls",
                     "voltage_offset": "Sprieguma korekcija",
                     "temperature_offset": "Temperatūras korekcija",
-                    "temperature_unit": "Temperatūras vienība"
+                    "temperature_unit": "Temperatūras vienība",
+                    "bluetooth_proxy": "Bluetooth starpniekserveris"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "BM6 monitora konfigurācija",
                 "description": "Pielāgoti akumulatora konfigurācijas parametri.",
                 "data": {
-                    "custom_dvr_min": "Minimālais izkraušanas spriegums (DVR)",
-                    "custom_dvr_max": "Maksimālais izkraušanas spriegums (DVR)",
-                    "custom_cvr_min": "Minimālais uzlādes spriegums (CVR)",
-                    "custom_cvr_max": "Maksimālais lādēšanas spriegums (CVR)",
-                    "custom_soc_min": "Minimālais lādiņa spriegums (SOC)",
-                    "custom_soc_max": "Maksimālais lādiņa spriegums (SOC)",
-                    "custom_sod_min": "Minimālais izplūdes spriegums (SOD)",
-                    "custom_sod_max": "Maksimālais lādiņa spriegums (SOD)"
+                    "custom_dvr_min": "Izlādes diapazons (DVR): minimālais spriegums",
+                    "custom_dvr_max": "Izlādes diapazons (DVR): maksimālais spriegums",
+                    "custom_cvr_min": "Uzlādes diapazons (CVR): minimālais spriegums",
+                    "custom_cvr_max": "Uzlādes diapazons (CVR): maksimālais spriegums",
+                    "custom_soc_min": "Uzlādes stāvoklis (SoC): minimālais spriegums",
+                    "custom_soc_max": "Uzlādes stāvoklis (SoC): maksimālais spriegums",
+                    "custom_sod_min": "Izlādes stāvoklis (SoD): minimālais spriegums",
+                    "custom_sod_max": "Izlādes stāvoklis (SoD): maksimālais spriegums"
                 }
             }
         },
@@ -49,14 +50,15 @@
     "options": {
         "step": {
             "init": {
-                "title": "BM6 monitora re -konfigurācija",
+                "title": "BM6 monitora re-konfigurācija",
                 "description": "Pamata ierīces konfigurācijas parametri.",
                 "data": {
                     "state_algorithm": "Akumulatora aprēķina algoritms",
                     "update_interval": "Datu atjaunināšanas intervāls",
                     "voltage_offset": "Sprieguma korekcija",
                     "temperature_offset": "Temperatūras korekcija",
-                    "temperature_unit": "Temperatūras vienība"
+                    "temperature_unit": "Temperatūras vienība",
+                    "bluetooth_proxy": "Bluetooth starpniekserveris"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "BM6 monitora konfigurācija",
                 "description": "Pielāgoti akumulatora konfigurācijas parametri.",
                 "data": {
-                    "custom_dvr_min": "Minimālais izkraušanas spriegums (DVR)",
-                    "custom_dvr_max": "Maksimālais izkraušanas spriegums (DVR)",
-                    "custom_cvr_min": "Minimālais uzlādes spriegums (CVR)",
-                    "custom_cvr_max": "Maksimālais lādēšanas spriegums (CVR)",
-                    "custom_soc_min": "Minimālais lādiņa spriegums (SOC)",
-                    "custom_soc_max": "Maksimālais lādiņa spriegums (SOC)",
-                    "custom_sod_min": "Minimālais izplūdes spriegums (SOD)",
-                    "custom_sod_max": "Maksimālais lādiņa spriegums (SOD)"
+                    "custom_dvr_min": "Izlādes diapazons (DVR): minimālais spriegums",
+                    "custom_dvr_max": "Izlādes diapazons (DVR): maksimālais spriegums",
+                    "custom_cvr_min": "Uzlādes diapazons (CVR): minimālais spriegums",
+                    "custom_cvr_max": "Uzlādes diapazons (CVR): maksimālais spriegums",
+                    "custom_soc_min": "Uzlādes stāvoklis (SoC): minimālais spriegums",
+                    "custom_soc_max": "Uzlādes stāvoklis (SoC): maksimālais spriegums",
+                    "custom_sod_min": "Izlādes stāvoklis (SoD): minimālais spriegums",
+                    "custom_sod_max": "Izlādes stāvoklis (SoD): maksimālais spriegums"
                 }
             }
         },
@@ -93,13 +95,13 @@
     "entity": {
         "sensor": {
             "voltage": {
-                "name": "Spriedze",
+                "name": "Spriegums",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Faktiskā spriedze"
+                        "name": "Izmērītais spriegums"
                     },
                     "voltage_corrected": {
-                        "name": "Labots spriegums"
+                        "name": "Koriģētais spriegums"
                     }
                 }
             },
@@ -107,10 +109,10 @@
                 "name": "Temperatūra",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Faktiskā temperatūra"
+                        "name": "Izmērītā temperatūra"
                     },
                     "temperature_corrected": {
-                        "name": "Labota temperatūra"
+                        "name": "Koriģētā temperatūra"
                     },
                     "temperature_unit": {
                         "name": "Temperatūras vienība"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Procents",
+                "name": "Uzlādes līmenis",
                 "state_attributes": {
                     "voltage_corrected": {
-                        "name": "Labots spriegums"
+                        "name": "Koriģētais spriegums"
                     },
                     "percentage": {
-                        "name": "Procents"
+                        "name": "Uzlādes līmenis"
                     },
                     "state_algorithm": {
                         "name": "Akumulatora aprēķina algoritms",
                         "state": {
-                            "by_device": "Aprēķināts ar BM6 ierīci",
-                            "soc_sod": "Aprēķināts no lādiņa/izdalīšanās stāvokļa (Soc/SOD)",
-                            "cvr_dvr": "Aprēķināts lādēšanas/izlādes spriegumā (CVR/DVR)"
+                            "by_device": "Nodrošina BM6",
+                            "soc_sod": "Uzlādes / izlādes stāvoklis (SoC/SoD)",
+                            "cvr_dvr": "Uzlādes / izlādes sprieguma diapazoni (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minimālais izkraušanas spriegums (DVR)"
+                        "name": "Izlādes diapazons (DVR): minimālais spriegums"
                     },
                     "dvr_max": {
-                        "name": "Maksimālais izkraušanas spriegums (DVR)"
+                        "name": "Izlādes diapazons (DVR): maksimālais spriegums"
                     },
                     "cvr_min": {
-                        "name": "Minimālais uzlādes spriegums (CVR)"
+                        "name": "Uzlādes diapazons (CVR): minimālais spriegums"
                     },
                     "cvr_max": {
-                        "name": "Maksimālais lādēšanas spriegums (CVR)"
+                        "name": "Uzlādes diapazons (CVR): maksimālais spriegums"
                     },
                     "sod_min": {
-                        "name": "Minimālais izplūdes spriegums (SOD)"
+                        "name": "Izlādes stāvoklis (SoD): minimālais spriegums"
                     },
                     "sod_max": {
-                        "name": "Maksimālais lādiņa spriegums (SOD)"
+                        "name": "Izlādes stāvoklis (SoD): maksimālais spriegums"
                     },
                     "soc_min": {
-                        "name": "Minimālais lādiņa spriegums (SOC)"
+                        "name": "Uzlādes stāvoklis (SoC): minimālais spriegums"
                     },
                     "soc_max": {
-                        "name": "Maksimālais lādiņa spriegums (SOC)"
+                        "name": "Uzlādes stāvoklis (SoC): maksimālais spriegums"
                     }
                 }
             },
             "state": {
-                "name": "Stens",
+                "name": "Stāvoklis",
                 "state": {
                     "unknown": "Nezināms",
-                    "ok": "Labi",
-                    "low_voltage": "Zemspriegums",
+                    "ok": "Normāls",
+                    "low_voltage": "Zems spriegums",
                     "under_voltage": "Pārāk zems spriegums",
-                    "charging": "Nosēšanās",
-                    "idle": "Dīkstāvē",
-                    "discharging": "Izkraušana",
-                    "over_voltage": "Pārāk augsts spriegums"
+                    "charging": "Uzlāde",
+                    "idle": "Miera stāvoklis",
+                    "discharging": "Izlāde",
+                    "over_voltage": "Pārspriegums"
                 }
             },
             "rssi": {
-                "name": "Signāla spēks (RSSI)"
+                "name": "Signāla stiprums"
             },
             "device_percentage": {
-                "name": "Ierīces procents"
+                "name": "Uzlādes līmenis (BM6)"
             },
             "device_state": {
-                "name": "Ierīces stāvoklis",
+                "name": "Stāvoklis (BM6)",
                 "state": {
                     "unknown": "Nezināms",
-                    "ok": "Labi",
-                    "low_voltage": "Zemspriegums",
-                    "charging": "Nosēšanās"
+                    "ok": "Normāls",
+                    "low_voltage": "Zems spriegums",
+                    "charging": "Uzlāde"
                 }
             },
             "rapid_acceleration": {
-                "name": "Paātrinājums"
+                "name": "Strauja sprieguma palielināšanās"
             },
             "rapid_deceleration": {
-                "name": "Lēnums"
+                "name": "Strauja sprieguma samazināšanās"
             },
             "bluetooth_scanner": {
-                "name": "SKANER Bluetooth"
+                "name": "Bluetooth skeneris"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 voltu",
-                "12v": "12 voltu"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Applūdušā skābe-Alley (FLA)",
-                "agm": "Absorbējot stikla paklāju (AGM)",
-                "gel": "Gēla šūnas (želeja)",
-                "nicd": "Niķeļa-kadmija (NICD)",
-                "nimh": "Niķeļa-metāla ūdens (NIMH)",
-                "liion": "Litija jons (li-ion)",
-                "lifepo4": "Litija dzelzs fosfāts (LIFEPO4)",
-                "lto": "Mazais titānietis (LTO)",
-                "custom": "Akumulators, kas nav standarta",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Atvērtais svina-skābes (FLA)",
+                "agm": "AGM (stikla šķiedras)",
+                "gel": "Gēla",
+                "efb": "EFB (start-stop)",
+                "nicd": "Niķeļa-kadmija (NiCd)",
+                "nimh": "Niķeļa-metāla hidrīda (NiMH)",
+                "liion": "Litija jonu (Li-ion)",
+                "lifepo4": "Litija dzelzs fosfāta (LiFePO4)",
+                "lto": "Litija titanāta (LTO)",
+                "custom": "Pielāgots"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Aizvērts ar BM6 ierīci",
-                "soc_sod": "Akceptors no izmaiņu/nosūtīšanas stāvokļa (Soc/SOD)",
-                "cvr_dvr": "Acceple Charaction/nosūtīšanas laiks (CVR/DVR)"
+                "by_device": "Nodrošina BM6",
+                "soc_sod": "Uzlādes / izlādes stāvoklis (SoC/SoD)",
+                "cvr_dvr": "Uzlādes / izlādes sprieguma diapazoni (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Nezināms",
-                "ok": "Labi",
-                "low_voltage": "Zemspriegums",
+                "ok": "Normāls",
+                "low_voltage": "Zems spriegums",
                 "under_voltage": "Pārāk zems spriegums",
-                "charging": "Nosēšanās",
-                "idle": "Dīkstāvē",
-                "discharging": "Izkraušana",
-                "over_voltage": "Pārāk augsts spriegums"
+                "charging": "Uzlāde",
+                "idle": "Miera stāvoklis",
+                "discharging": "Izlāde",
+                "over_voltage": "Pārspriegums"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "OK stāvoklis sākās",
-            "start_low_voltage": "Ir sācies zemspriegums",
-            "under_voltage": "Pārāk zems spriegums",
-            "start_discharging": "Izkraušana ir sākusies",
-            "start_idle": "Dīkstāves režīms ir sācies",
-            "start_charging": "Sākās uzlāde",
-            "over_voltage": "Pārāk augsts spriegums",
-            "state_changed": "Valsts ir mainījusies"
+            "start_ok": "Kļūst normāls",
+            "start_low_voltage": "Spriegums kļūst zems",
+            "under_voltage": "Spriegums kļūst pārāk zems",
+            "start_discharging": "Sāk izlādēties",
+            "start_idle": "Pāriet miera stāvoklī",
+            "start_charging": "Sāk uzlādēties",
+            "over_voltage": "Rodas pārspriegums",
+            "state_changed": "Stāvoklis mainās"
         }
     }
 }

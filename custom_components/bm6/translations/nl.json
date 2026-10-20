@@ -1,21 +1,22 @@
 {
-    "title": "BM6 -batterijmonitor",
+    "title": "BM6-batterijmonitor",
     "config": {
         "step": {
             "user": {
-                "title": "Configuratie van de nieuwe BM6 -monitor",
+                "title": "Configuratie van de nieuwe BM6-monitor",
                 "description": "Basisapparaatconfiguratieparameters.",
                 "data": {
                     "device_address": "Naam/adres BM6",
                     "state_algorithm": "Batterijberekeningsalgoritme",
-                    "update_interval": "Gegevensupdate -interval",
+                    "update_interval": "Gegevensupdate-interval",
                     "voltage_offset": "Spanningscorrectie",
                     "temperature_offset": "Temperatuurcorrectie",
-                    "temperature_unit": "Temperatuureenheid"
+                    "temperature_unit": "Temperatuureenheid",
+                    "bluetooth_proxy": "Bluetooth-proxy"
                 }
             },
             "custom_calculation": {
-                "title": "Configuratie van de nieuwe BM6 -monitor",
+                "title": "Configuratie van de nieuwe BM6-monitor",
                 "description": "Batterijconfiguratieparameters.",
                 "data": {
                     "battery_voltage": "Batterijspanning",
@@ -26,41 +27,42 @@
                 "title": "BM6 Monitor Configuratie",
                 "description": "Aangepaste batterijconfiguratieparameters.",
                 "data": {
-                    "custom_dvr_min": "Minimale losspanning (DVR)",
-                    "custom_dvr_max": "Maximale losspanning (DVR)",
-                    "custom_cvr_min": "Minimale laadspanning (CVR)",
-                    "custom_cvr_max": "Maximale laadspanning (CVR)",
-                    "custom_soc_min": "Minimale ladingsspanning (SOC)",
-                    "custom_soc_max": "Maximale ladingsspanning (SOC)",
-                    "custom_sod_min": "Minimale ontladingsspanning (SOD)",
-                    "custom_sod_max": "Maximale ladingsspanning (SOD)"
+                    "custom_dvr_min": "Ontlaadbereik (DVR): minimale spanning",
+                    "custom_dvr_max": "Ontlaadbereik (DVR): maximale spanning",
+                    "custom_cvr_min": "Laadbereik (CVR): minimale spanning",
+                    "custom_cvr_max": "Laadbereik (CVR): maximale spanning",
+                    "custom_soc_min": "Laadtoestand (SoC): minimale spanning",
+                    "custom_soc_max": "Laadtoestand (SoC): maximale spanning",
+                    "custom_sod_min": "Ontlaadtoestand (SoD): minimale spanning",
+                    "custom_sod_max": "Ontlaadtoestand (SoD): maximale spanning"
                 }
             }
         },
         "abort": {
-            "no_devices_found": "Er zijn geen BM6 -apparaten gevonden."
+            "no_devices_found": "Er zijn geen BM6-apparaten gevonden."
         },
         "error": {
             "max_less_than_min": "De maximale spanningswaarde moet groter zijn dan het minimum.",
-            "cvr_less_than_dvr": "De CVR -waarde moet hoger zijn dan de DVR -waarde.",
-            "soc_less_than_sod": "SOC -waarde moet groter zijn dan de waarde van SOD."
+            "cvr_less_than_dvr": "De CVR-waarde moet hoger zijn dan de DVR-waarde.",
+            "soc_less_than_sod": "SOC-waarde moet groter zijn dan de waarde van SOD."
         }
     },
     "options": {
         "step": {
             "init": {
-                "title": "Re -configuratie van de BM6 -monitor",
+                "title": "Re-configuratie van de BM6-monitor",
                 "description": "Basisapparaatconfiguratieparameters.",
                 "data": {
                     "state_algorithm": "Batterijberekeningsalgoritme",
-                    "update_interval": "Gegevensupdate -interval",
+                    "update_interval": "Gegevensupdate-interval",
                     "voltage_offset": "Spanningscorrectie",
                     "temperature_offset": "Temperatuurcorrectie",
-                    "temperature_unit": "Temperatuureenheid"
+                    "temperature_unit": "Temperatuureenheid",
+                    "bluetooth_proxy": "Bluetooth-proxy"
                 }
             },
             "custom_calculation": {
-                "title": "Configuratie van de nieuwe BM6 -monitor",
+                "title": "Configuratie van de nieuwe BM6-monitor",
                 "description": "Batterijconfiguratieparameters.",
                 "data": {
                     "battery_voltage": "Batterijspanning",
@@ -71,14 +73,14 @@
                 "title": "BM6 Monitor Configuratie",
                 "description": "Aangepaste batterijconfiguratieparameters.",
                 "data": {
-                    "custom_dvr_min": "Minimale losspanning (DVR)",
-                    "custom_dvr_max": "Maximale losspanning (DVR)",
-                    "custom_cvr_min": "Minimale laadspanning (CVR)",
-                    "custom_cvr_max": "Maximale laadspanning (CVR)",
-                    "custom_soc_min": "Minimale ladingsspanning (SOC)",
-                    "custom_soc_max": "Maximale ladingsspanning (SOC)",
-                    "custom_sod_min": "Minimale ontladingsspanning (SOD)",
-                    "custom_sod_max": "Maximale ladingsspanning (SOD)"
+                    "custom_dvr_min": "Ontlaadbereik (DVR): minimale spanning",
+                    "custom_dvr_max": "Ontlaadbereik (DVR): maximale spanning",
+                    "custom_cvr_min": "Laadbereik (CVR): minimale spanning",
+                    "custom_cvr_max": "Laadbereik (CVR): maximale spanning",
+                    "custom_soc_min": "Laadtoestand (SoC): minimale spanning",
+                    "custom_soc_max": "Laadtoestand (SoC): maximale spanning",
+                    "custom_sod_min": "Ontlaadtoestand (SoD): minimale spanning",
+                    "custom_sod_max": "Ontlaadtoestand (SoD): maximale spanning"
                 }
             }
         },
@@ -86,8 +88,8 @@
             "invalid_input": "Onjuiste invoergegevens.",
             "required_field": "Dit veld is vereist.",
             "max_less_than_min": "De maximale spanningswaarde moet groter zijn dan het minimum.",
-            "cvr_less_than_dvr": "De CVR -waarde moet hoger zijn dan de DVR -waarde.",
-            "soc_less_than_sod": "SOC -waarde moet groter zijn dan de waarde van SOD."
+            "cvr_less_than_dvr": "De CVR-waarde moet hoger zijn dan de DVR-waarde.",
+            "soc_less_than_sod": "SOC-waarde moet groter zijn dan de waarde van SOD."
         }
     },
     "entity": {
@@ -96,7 +98,7 @@
                 "name": "Spanning",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Werkelijke spanning"
+                        "name": "Gemeten spanning"
                     },
                     "voltage_corrected": {
                         "name": "Gecorrigeerde spanning"
@@ -107,7 +109,7 @@
                 "name": "Temperatuur",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Werkelijke temperatuur"
+                        "name": "Gemeten temperatuur"
                     },
                     "temperature_corrected": {
                         "name": "Gecorrigeerde temperatuur"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Percentage",
+                "name": "Laadniveau",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Gecorrigeerde spanning"
                     },
                     "percentage": {
-                        "name": "Percentage"
+                        "name": "Laadniveau"
                     },
                     "state_algorithm": {
                         "name": "Batterijberekeningsalgoritme",
                         "state": {
-                            "by_device": "Berekend door het BM6 -apparaat",
-                            "soc_sod": "Berekend uit de toestand van lading/ontlading (SOC/SOD)",
-                            "cvr_dvr": "Berekend in laad-/ontladingsspanning (CVR/DVR)"
+                            "by_device": "Geleverd door de BM6",
+                            "soc_sod": "Laad-/ontlaadtoestand (SoC/SoD)",
+                            "cvr_dvr": "Laad-/ontlaadspanningsbereiken (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minimale losspanning (DVR)"
+                        "name": "Ontlaadbereik (DVR): minimale spanning"
                     },
                     "dvr_max": {
-                        "name": "Maximale losspanning (DVR)"
+                        "name": "Ontlaadbereik (DVR): maximale spanning"
                     },
                     "cvr_min": {
-                        "name": "Minimale laadspanning (CVR)"
+                        "name": "Laadbereik (CVR): minimale spanning"
                     },
                     "cvr_max": {
-                        "name": "Maximale laadspanning (CVR)"
+                        "name": "Laadbereik (CVR): maximale spanning"
                     },
                     "sod_min": {
-                        "name": "Minimale ontladingsspanning (SOD)"
+                        "name": "Ontlaadtoestand (SoD): minimale spanning"
                     },
                     "sod_max": {
-                        "name": "Maximale ladingsspanning (SOD)"
+                        "name": "Ontlaadtoestand (SoD): maximale spanning"
                     },
                     "soc_min": {
-                        "name": "Minimale ladingsspanning (SOC)"
+                        "name": "Laadtoestand (SoC): minimale spanning"
                     },
                     "soc_max": {
-                        "name": "Maximale ladingsspanning (SOC)"
+                        "name": "Laadtoestand (SoC): maximale spanning"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Status",
                 "state": {
                     "unknown": "Onbekend",
-                    "ok": "OK",
+                    "ok": "Normaal",
                     "low_voltage": "Lage spanning",
-                    "under_voltage": "Te lage spanning",
-                    "charging": "Landing",
-                    "idle": "Inactief",
-                    "discharging": "Het lossen",
-                    "over_voltage": "Te hoge spanning"
+                    "under_voltage": "Onderspanning",
+                    "charging": "Laden",
+                    "idle": "Rust",
+                    "discharging": "Ontladen",
+                    "over_voltage": "Overspanning"
                 }
             },
             "rssi": {
-                "name": "Signaalkracht (RSSI)"
+                "name": "Signaalsterkte"
             },
             "device_percentage": {
-                "name": "Percentage van het apparaat"
+                "name": "Laadniveau (BM6)"
             },
             "device_state": {
-                "name": "Conditie van het apparaat",
+                "name": "Status (BM6)",
                 "state": {
                     "unknown": "Onbekend",
-                    "ok": "OK",
+                    "ok": "Normaal",
                     "low_voltage": "Lage spanning",
-                    "charging": "Landing"
+                    "charging": "Laden"
                 }
             },
             "rapid_acceleration": {
-                "name": "Versnelling"
+                "name": "Snelle spanningsstijging"
             },
             "rapid_deceleration": {
-                "name": "Traagheid"
+                "name": "Snelle spanningsdaling"
             },
             "bluetooth_scanner": {
-                "name": "Skaner Bluetooth"
+                "name": "Bluetooth-scanner"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 volt",
-                "12v": "12 volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Overstroomde zuur-alley (FLA)",
-                "agm": "Absorberende glazen mat (AGM)",
-                "gel": "Gelcellen (gel)",
-                "nicd": "Nikkel-Cadmia (NICD)",
-                "nimh": "Nikkel-metaal-water (NIMH)",
-                "liion": "Lithium-ion (li-ion)",
-                "lifepo4": "Lithium -ijzerfosfaat (LifePo4)",
-                "lto": "Little Titanian (LTO)",
-                "custom": "Niet -standaard batterij",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Natte loodaccu (FLA)",
+                "agm": "AGM (absorberende glasmat)",
+                "gel": "Gel",
+                "efb": "EFB (start-stop)",
+                "nicd": "Nikkel-cadmium (NiCd)",
+                "nimh": "Nikkel-metaalhydride (NiMH)",
+                "liion": "Lithium-ion (Li-ion)",
+                "lifepo4": "Lithium-ijzerfosfaat (LiFePO4)",
+                "lto": "Lithiumtitanaat (LTO)",
+                "custom": "Aangepast"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Gesloten door het BM6 -apparaat",
-                "soc_sod": "Acceptor van de wijziging/verzendstatus (SOC/SOD)",
-                "cvr_dvr": "ACCEPLE Charaction/Sending Time (CVR/DVR)"
+                "by_device": "Geleverd door de BM6",
+                "soc_sod": "Laad-/ontlaadtoestand (SoC/SoD)",
+                "cvr_dvr": "Laad-/ontlaadspanningsbereiken (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Onbekend",
-                "ok": "OK",
+                "ok": "Normaal",
                 "low_voltage": "Lage spanning",
-                "under_voltage": "Te lage spanning",
-                "charging": "Landing",
-                "idle": "Inactief",
-                "discharging": "Het lossen",
-                "over_voltage": "Te hoge spanning"
+                "under_voltage": "Onderspanning",
+                "charging": "Laden",
+                "idle": "Rust",
+                "discharging": "Ontladen",
+                "over_voltage": "Overspanning"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "OK's toestand begon",
-            "start_low_voltage": "De lage spanning is begonnen",
-            "under_voltage": "Te lage spanning",
-            "start_discharging": "Het lossen is begonnen",
-            "start_idle": "De inactieve modus is begonnen",
-            "start_charging": "Opladen begon",
-            "over_voltage": "Te hoge spanning",
-            "state_changed": "De staat is veranderd"
+            "start_ok": "Wordt normaal",
+            "start_low_voltage": "Wordt lage spanning",
+            "under_voltage": "Wordt onderspanning",
+            "start_discharging": "Begint te ontladen",
+            "start_idle": "Gaat in rust",
+            "start_charging": "Begint te laden",
+            "over_voltage": "Wordt overspanning",
+            "state_changed": "Status verandert"
         }
     }
 }

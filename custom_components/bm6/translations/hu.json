@@ -11,7 +11,8 @@
                     "update_interval": "Adatfrissítési intervallum",
                     "voltage_offset": "Feszültségkorrekció",
                     "temperature_offset": "Hőmérsékleti korrekció",
-                    "temperature_unit": "Hőmérsékleti egység"
+                    "temperature_unit": "Hőmérsékleti egység",
+                    "bluetooth_proxy": "Bluetooth-proxy"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "BM6 monitor konfigurációja",
                 "description": "Egyéni akkumulátor konfigurációs paraméterek.",
                 "data": {
-                    "custom_dvr_min": "Minimális kirakodási feszültség (DVR)",
-                    "custom_dvr_max": "Maximális kirakodási feszültség (DVR)",
-                    "custom_cvr_min": "Minimális töltési feszültség (CVR)",
-                    "custom_cvr_max": "Maximális töltési feszültség (CVR)",
-                    "custom_soc_min": "Minimális töltési feszültség (SOC)",
-                    "custom_soc_max": "Maximális töltési feszültség (SOC)",
-                    "custom_sod_min": "Minimális kisülési feszültség (SOD)",
-                    "custom_sod_max": "Maximális töltési feszültség (SOD)"
+                    "custom_dvr_min": "Kisütési tartomány (DVR): minimális feszültség",
+                    "custom_dvr_max": "Kisütési tartomány (DVR): maximális feszültség",
+                    "custom_cvr_min": "Töltési tartomány (CVR): minimális feszültség",
+                    "custom_cvr_max": "Töltési tartomány (CVR): maximális feszültség",
+                    "custom_soc_min": "Töltöttségi állapot (SoC): minimális feszültség",
+                    "custom_soc_max": "Töltöttségi állapot (SoC): maximális feszültség",
+                    "custom_sod_min": "Kisütöttségi állapot (SoD): minimális feszültség",
+                    "custom_sod_max": "Kisütöttségi állapot (SoD): maximális feszültség"
                 }
             }
         },
@@ -42,7 +43,7 @@
         },
         "error": {
             "max_less_than_min": "A maximális feszültségértéknek nagyobbnak kell lennie, mint a minimum.",
-            "cvr_less_than_dvr": "A CVR -értéknek magasabbnak kell lennie, mint a DVR érték.",
+            "cvr_less_than_dvr": "A CVR-értéknek magasabbnak kell lennie, mint a DVR érték.",
             "soc_less_than_sod": "A SOC értéknek nagyobbnak kell lennie, mint a SOD értéke."
         }
     },
@@ -56,7 +57,8 @@
                     "update_interval": "Adatfrissítési intervallum",
                     "voltage_offset": "Feszültségkorrekció",
                     "temperature_offset": "Hőmérsékleti korrekció",
-                    "temperature_unit": "Hőmérsékleti egység"
+                    "temperature_unit": "Hőmérsékleti egység",
+                    "bluetooth_proxy": "Bluetooth-proxy"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "BM6 monitor konfigurációja",
                 "description": "Egyéni akkumulátor konfigurációs paraméterek.",
                 "data": {
-                    "custom_dvr_min": "Minimális kirakodási feszültség (DVR)",
-                    "custom_dvr_max": "Maximális kirakodási feszültség (DVR)",
-                    "custom_cvr_min": "Minimális töltési feszültség (CVR)",
-                    "custom_cvr_max": "Maximális töltési feszültség (CVR)",
-                    "custom_soc_min": "Minimális töltési feszültség (SOC)",
-                    "custom_soc_max": "Maximális töltési feszültség (SOC)",
-                    "custom_sod_min": "Minimális kisülési feszültség (SOD)",
-                    "custom_sod_max": "Maximális töltési feszültség (SOD)"
+                    "custom_dvr_min": "Kisütési tartomány (DVR): minimális feszültség",
+                    "custom_dvr_max": "Kisütési tartomány (DVR): maximális feszültség",
+                    "custom_cvr_min": "Töltési tartomány (CVR): minimális feszültség",
+                    "custom_cvr_max": "Töltési tartomány (CVR): maximális feszültség",
+                    "custom_soc_min": "Töltöttségi állapot (SoC): minimális feszültség",
+                    "custom_soc_max": "Töltöttségi állapot (SoC): maximális feszültség",
+                    "custom_sod_min": "Kisütöttségi állapot (SoD): minimális feszültség",
+                    "custom_sod_max": "Kisütöttségi állapot (SoD): maximális feszültség"
                 }
             }
         },
@@ -86,7 +88,7 @@
             "invalid_input": "Helytelen bemeneti adatok.",
             "required_field": "Ez a mező szükséges.",
             "max_less_than_min": "A maximális feszültségértéknek nagyobbnak kell lennie, mint a minimum.",
-            "cvr_less_than_dvr": "A CVR -értéknek magasabbnak kell lennie, mint a DVR érték.",
+            "cvr_less_than_dvr": "A CVR-értéknek magasabbnak kell lennie, mint a DVR érték.",
             "soc_less_than_sod": "A SOC értéknek nagyobbnak kell lennie, mint a SOD értéke."
         }
     },
@@ -96,10 +98,10 @@
                 "name": "Feszültség",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Tényleges feszültség"
+                        "name": "Mért feszültség"
                     },
                     "voltage_corrected": {
-                        "name": "Javított feszültség"
+                        "name": "Korrigált feszültség"
                     }
                 }
             },
@@ -107,10 +109,10 @@
                 "name": "Hőmérséklet",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Tényleges hőmérséklet"
+                        "name": "Mért hőmérséklet"
                     },
                     "temperature_corrected": {
-                        "name": "Javított hőmérséklet"
+                        "name": "Korrigált hőmérséklet"
                     },
                     "temperature_unit": {
                         "name": "Hőmérsékleti egység"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Százalékos",
+                "name": "Töltöttség",
                 "state_attributes": {
                     "voltage_corrected": {
-                        "name": "Javított feszültség"
+                        "name": "Korrigált feszültség"
                     },
                     "percentage": {
-                        "name": "Százalékos"
+                        "name": "Töltöttség"
                     },
                     "state_algorithm": {
                         "name": "Akkumulátor kiszámítási algoritmus",
                         "state": {
-                            "by_device": "A BM6 eszköz által kiszámítva",
-                            "soc_sod": "A töltés/kisülés állapotából számolva (SOC/SOD)",
-                            "cvr_dvr": "Számítva a töltés/kisülési feszültségben (CVR/DVR)"
+                            "by_device": "A BM6 adja meg",
+                            "soc_sod": "Töltési / kisütési állapot (SoC/SoD)",
+                            "cvr_dvr": "Töltési / kisütési feszültségtartományok (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minimális kirakodási feszültség (DVR)"
+                        "name": "Kisütési tartomány (DVR): minimális feszültség"
                     },
                     "dvr_max": {
-                        "name": "Maximális kirakodási feszültség (DVR)"
+                        "name": "Kisütési tartomány (DVR): maximális feszültség"
                     },
                     "cvr_min": {
-                        "name": "Minimális töltési feszültség (CVR)"
+                        "name": "Töltési tartomány (CVR): minimális feszültség"
                     },
                     "cvr_max": {
-                        "name": "Maximális töltési feszültség (CVR)"
+                        "name": "Töltési tartomány (CVR): maximális feszültség"
                     },
                     "sod_min": {
-                        "name": "Minimális kisülési feszültség (SOD)"
+                        "name": "Kisütöttségi állapot (SoD): minimális feszültség"
                     },
                     "sod_max": {
-                        "name": "Maximális töltési feszültség (SOD)"
+                        "name": "Kisütöttségi állapot (SoD): maximális feszültség"
                     },
                     "soc_min": {
-                        "name": "Minimális töltési feszültség (SOC)"
+                        "name": "Töltöttségi állapot (SoC): minimális feszültség"
                     },
                     "soc_max": {
-                        "name": "Maximális töltési feszültség (SOC)"
+                        "name": "Töltöttségi állapot (SoC): maximális feszültség"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Állapot",
                 "state": {
                     "unknown": "Ismeretlen",
-                    "ok": "RENDBEN",
+                    "ok": "Normál",
                     "low_voltage": "Alacsony feszültség",
-                    "under_voltage": "Túl alacsony feszültség",
-                    "charging": "Leszállás",
-                    "idle": "Tétlen",
-                    "discharging": "Kirakodás",
-                    "over_voltage": "Túl nagy feszültség"
+                    "under_voltage": "Alulfeszültség",
+                    "charging": "Töltés",
+                    "idle": "Nyugalom",
+                    "discharging": "Kisütés",
+                    "over_voltage": "Túlfeszültség"
                 }
             },
             "rssi": {
-                "name": "Jelerő (RSSI)"
+                "name": "Jelerősség"
             },
             "device_percentage": {
-                "name": "Az eszköz százalékos aránya"
+                "name": "Töltöttség (BM6)"
             },
             "device_state": {
-                "name": "Az eszköz állapota",
+                "name": "Állapot (BM6)",
                 "state": {
                     "unknown": "Ismeretlen",
-                    "ok": "RENDBEN",
+                    "ok": "Normál",
                     "low_voltage": "Alacsony feszültség",
-                    "charging": "Leszállás"
+                    "charging": "Töltés"
                 }
             },
             "rapid_acceleration": {
-                "name": "Gyorsulás"
+                "name": "Gyors feszültségemelkedés"
             },
             "rapid_deceleration": {
-                "name": "Lassúság"
+                "name": "Gyors feszültségesés"
             },
             "bluetooth_scanner": {
-                "name": "Skaner Bluetooth"
+                "name": "Bluetooth-szkenner"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 volt",
-                "12v": "12 volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Elárasztott sav alley (FLA)",
-                "agm": "Elnyelő üvegszőnyeg (AGM)",
-                "gel": "Gélsejtek (gél)",
-                "nicd": "Nikkel-cadmia (NICD)",
-                "nimh": "Nikkel-fém-víz (NIMH)",
-                "liion": "Lítium-ion (li-ion)",
-                "lifepo4": "Lítium vas -foszfát (LIFEPO4)",
-                "lto": "Kis titán (LTO)",
-                "custom": "Nem szabványos akkumulátor",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Nyitott ólomsavas (FLA)",
+                "agm": "AGM (üvegszálas)",
+                "gel": "Zselés",
+                "efb": "EFB (start-stop)",
+                "nicd": "Nikkel-kadmium (NiCd)",
+                "nimh": "Nikkel-fémhidrid (NiMH)",
+                "liion": "Lítium-ion (Li-ion)",
+                "lifepo4": "Lítium-vas-foszfát (LiFePO4)",
+                "lto": "Lítium-titanát (LTO)",
+                "custom": "Egyéni"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "A BM6 eszköz zárja le",
-                "soc_sod": "Elfogadó a változás/küldési állapotból (SOC/SOD)",
-                "cvr_dvr": "ACCEPLE CHARCACTE/Elküldési idő (CVR/DVR)"
+                "by_device": "A BM6 adja meg",
+                "soc_sod": "Töltési / kisütési állapot (SoC/SoD)",
+                "cvr_dvr": "Töltési / kisütési feszültségtartományok (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Ismeretlen",
-                "ok": "RENDBEN",
+                "ok": "Normál",
                 "low_voltage": "Alacsony feszültség",
-                "under_voltage": "Túl alacsony feszültség",
-                "charging": "Leszállás",
-                "idle": "Tétlen",
-                "discharging": "Kirakodás",
-                "over_voltage": "Túl nagy feszültség"
+                "under_voltage": "Alulfeszültség",
+                "charging": "Töltés",
+                "idle": "Nyugalom",
+                "discharging": "Kisütés",
+                "over_voltage": "Túlfeszültség"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "Ok állapota kezdődött",
-            "start_low_voltage": "Elkezdődött az alacsony feszültség",
-            "under_voltage": "Túl alacsony feszültség",
-            "start_discharging": "Megkezdődött a kirakodás",
-            "start_idle": "Megkezdődött a tétlen mód",
-            "start_charging": "Megkezdődött a töltés",
-            "over_voltage": "Túl nagy feszültség",
-            "state_changed": "Az állam megváltozott"
+            "start_ok": "Normál lesz",
+            "start_low_voltage": "Alacsony feszültségre vált",
+            "under_voltage": "Alulfeszültségre vált",
+            "start_discharging": "Kisülni kezd",
+            "start_idle": "Nyugalomba vált",
+            "start_charging": "Töltődni kezd",
+            "over_voltage": "Túlfeszültségre vált",
+            "state_changed": "Az állapot megváltozik"
         }
     }
 }

@@ -3,7 +3,7 @@
     "config": {
         "step": {
             "user": {
-                "title": "Konfiguration av den nya BM6 -skärmen",
+                "title": "Konfiguration av den nya BM6-skärmen",
                 "description": "Grundläggande enhetskonfigurationsparametrar.",
                 "data": {
                     "device_address": "Namn/adress BM6",
@@ -11,11 +11,12 @@
                     "update_interval": "Datauppdateringsintervall",
                     "voltage_offset": "Spänningskorrigering",
                     "temperature_offset": "Temperaturkorrigering",
-                    "temperature_unit": "Temperaturenhet"
+                    "temperature_unit": "Temperaturenhet",
+                    "bluetooth_proxy": "Bluetooth-proxy"
                 }
             },
             "custom_calculation": {
-                "title": "Konfiguration av den nya BM6 -skärmen",
+                "title": "Konfiguration av den nya BM6-skärmen",
                 "description": "Batterikonfigurationsparametrar.",
                 "data": {
                     "battery_voltage": "Batterispänning",
@@ -23,44 +24,45 @@
                 }
             },
             "custom_voltage": {
-                "title": "BM6 Monitor -konfiguration",
+                "title": "BM6 Monitor-konfiguration",
                 "description": "Anpassade batterikonfigurationsparametrar.",
                 "data": {
-                    "custom_dvr_min": "Minsta lossningsspänning (DVR)",
-                    "custom_dvr_max": "Maximal lossningsspänning (DVR)",
-                    "custom_cvr_min": "Minsta laddningsspänning (CVR)",
-                    "custom_cvr_max": "Maximal laddningsspänning (CVR)",
-                    "custom_soc_min": "Minsta laddningsspänning (SOC)",
-                    "custom_soc_max": "Maximal laddningsspänning (SOC)",
-                    "custom_sod_min": "Minsta urladdningsspänning (SOD)",
-                    "custom_sod_max": "Maximal laddningsspänning (SOD)"
+                    "custom_dvr_min": "Urladdningsintervall (DVR): minimispänning",
+                    "custom_dvr_max": "Urladdningsintervall (DVR): maximispänning",
+                    "custom_cvr_min": "Laddningsintervall (CVR): minimispänning",
+                    "custom_cvr_max": "Laddningsintervall (CVR): maximispänning",
+                    "custom_soc_min": "Laddningstillstånd (SoC): minimispänning",
+                    "custom_soc_max": "Laddningstillstånd (SoC): maximispänning",
+                    "custom_sod_min": "Urladdningstillstånd (SoD): minimispänning",
+                    "custom_sod_max": "Urladdningstillstånd (SoD): maximispänning"
                 }
             }
         },
         "abort": {
-            "no_devices_found": "Inga BM6 -enheter hittades."
+            "no_devices_found": "Inga BM6-enheter hittades."
         },
         "error": {
             "max_less_than_min": "Det maximala spänningsvärdet måste vara större än det minsta.",
-            "cvr_less_than_dvr": "CVR -värdet måste vara högre än DVR -värdet.",
-            "soc_less_than_sod": "SoC -värdet måste vara större än värdet på SOD."
+            "cvr_less_than_dvr": "CVR-värdet måste vara högre än DVR-värdet.",
+            "soc_less_than_sod": "SoC-värdet måste vara större än värdet på SOD."
         }
     },
     "options": {
         "step": {
             "init": {
-                "title": "Re -konfiguration av BM6 -monitorn",
+                "title": "Re-konfiguration av BM6-monitorn",
                 "description": "Grundläggande enhetskonfigurationsparametrar.",
                 "data": {
                     "state_algorithm": "Batteriläkningsalgoritm",
                     "update_interval": "Datauppdateringsintervall",
                     "voltage_offset": "Spänningskorrigering",
                     "temperature_offset": "Temperaturkorrigering",
-                    "temperature_unit": "Temperaturenhet"
+                    "temperature_unit": "Temperaturenhet",
+                    "bluetooth_proxy": "Bluetooth-proxy"
                 }
             },
             "custom_calculation": {
-                "title": "Konfiguration av den nya BM6 -skärmen",
+                "title": "Konfiguration av den nya BM6-skärmen",
                 "description": "Batterikonfigurationsparametrar.",
                 "data": {
                     "battery_voltage": "Batterispänning",
@@ -68,17 +70,17 @@
                 }
             },
             "custom_voltage": {
-                "title": "BM6 Monitor -konfiguration",
+                "title": "BM6 Monitor-konfiguration",
                 "description": "Anpassade batterikonfigurationsparametrar.",
                 "data": {
-                    "custom_dvr_min": "Minsta lossningsspänning (DVR)",
-                    "custom_dvr_max": "Maximal lossningsspänning (DVR)",
-                    "custom_cvr_min": "Minsta laddningsspänning (CVR)",
-                    "custom_cvr_max": "Maximal laddningsspänning (CVR)",
-                    "custom_soc_min": "Minsta laddningsspänning (SOC)",
-                    "custom_soc_max": "Maximal laddningsspänning (SOC)",
-                    "custom_sod_min": "Minsta urladdningsspänning (SOD)",
-                    "custom_sod_max": "Maximal laddningsspänning (SOD)"
+                    "custom_dvr_min": "Urladdningsintervall (DVR): minimispänning",
+                    "custom_dvr_max": "Urladdningsintervall (DVR): maximispänning",
+                    "custom_cvr_min": "Laddningsintervall (CVR): minimispänning",
+                    "custom_cvr_max": "Laddningsintervall (CVR): maximispänning",
+                    "custom_soc_min": "Laddningstillstånd (SoC): minimispänning",
+                    "custom_soc_max": "Laddningstillstånd (SoC): maximispänning",
+                    "custom_sod_min": "Urladdningstillstånd (SoD): minimispänning",
+                    "custom_sod_max": "Urladdningstillstånd (SoD): maximispänning"
                 }
             }
         },
@@ -86,8 +88,8 @@
             "invalid_input": "Felaktig inmatningsdata.",
             "required_field": "Detta fält krävs.",
             "max_less_than_min": "Det maximala spänningsvärdet måste vara större än det minsta.",
-            "cvr_less_than_dvr": "CVR -värdet måste vara högre än DVR -värdet.",
-            "soc_less_than_sod": "SoC -värdet måste vara större än värdet på SOD."
+            "cvr_less_than_dvr": "CVR-värdet måste vara högre än DVR-värdet.",
+            "soc_less_than_sod": "SoC-värdet måste vara större än värdet på SOD."
         }
     },
     "entity": {
@@ -96,7 +98,7 @@
                 "name": "Spänning",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Faktisk spänning"
+                        "name": "Uppmätt spänning"
                     },
                     "voltage_corrected": {
                         "name": "Korrigerad spänning"
@@ -107,7 +109,7 @@
                 "name": "Temperatur",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Faktisk temperatur"
+                        "name": "Uppmätt temperatur"
                     },
                     "temperature_corrected": {
                         "name": "Korrigerad temperatur"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Procent",
+                "name": "Laddningsnivå",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Korrigerad spänning"
                     },
                     "percentage": {
-                        "name": "Procent"
+                        "name": "Laddningsnivå"
                     },
                     "state_algorithm": {
                         "name": "Batteriläkningsalgoritm",
                         "state": {
-                            "by_device": "Beräknas av BM6 -enheten",
-                            "soc_sod": "Beräknat från tillståndet för laddning/urladdning (SOC/SOD)",
-                            "cvr_dvr": "Beräknad vid laddnings-/urladdningsspänning (CVR/DVR)"
+                            "by_device": "Rapporteras av BM6",
+                            "soc_sod": "Laddnings-/urladdningstillstånd (SoC/SoD)",
+                            "cvr_dvr": "Spänningsintervall för laddning/urladdning (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minsta lossningsspänning (DVR)"
+                        "name": "Urladdningsintervall (DVR): minimispänning"
                     },
                     "dvr_max": {
-                        "name": "Maximal lossningsspänning (DVR)"
+                        "name": "Urladdningsintervall (DVR): maximispänning"
                     },
                     "cvr_min": {
-                        "name": "Minsta laddningsspänning (CVR)"
+                        "name": "Laddningsintervall (CVR): minimispänning"
                     },
                     "cvr_max": {
-                        "name": "Maximal laddningsspänning (CVR)"
+                        "name": "Laddningsintervall (CVR): maximispänning"
                     },
                     "sod_min": {
-                        "name": "Minsta urladdningsspänning (SOD)"
+                        "name": "Urladdningstillstånd (SoD): minimispänning"
                     },
                     "sod_max": {
-                        "name": "Maximal laddningsspänning (SOD)"
+                        "name": "Urladdningstillstånd (SoD): maximispänning"
                     },
                     "soc_min": {
-                        "name": "Minsta laddningsspänning (SOC)"
+                        "name": "Laddningstillstånd (SoC): minimispänning"
                     },
                     "soc_max": {
-                        "name": "Maximal laddningsspänning (SOC)"
+                        "name": "Laddningstillstånd (SoC): maximispänning"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Tillstånd",
                 "state": {
-                    "unknown": "Okänd",
-                    "ok": "OK",
-                    "low_voltage": "Lågspänning",
-                    "under_voltage": "För låg spänning",
-                    "charging": "Landning",
-                    "idle": "På tomgång",
-                    "discharging": "Avlastning",
-                    "over_voltage": "För högspänning"
+                    "unknown": "Okänt",
+                    "ok": "Normal",
+                    "low_voltage": "Låg spänning",
+                    "under_voltage": "Underspänning",
+                    "charging": "Laddar",
+                    "idle": "Vila",
+                    "discharging": "Urladdas",
+                    "over_voltage": "Överspänning"
                 }
             },
             "rssi": {
-                "name": "Signalkraft (RSSI)"
+                "name": "Signalstyrka"
             },
             "device_percentage": {
-                "name": "Procentandel av enheten"
+                "name": "Laddningsnivå (BM6)"
             },
             "device_state": {
-                "name": "Enhetens skick",
+                "name": "Tillstånd (BM6)",
                 "state": {
-                    "unknown": "Okänd",
-                    "ok": "OK",
-                    "low_voltage": "Lågspänning",
-                    "charging": "Landning"
+                    "unknown": "Okänt",
+                    "ok": "Normal",
+                    "low_voltage": "Låg spänning",
+                    "charging": "Laddar"
                 }
             },
             "rapid_acceleration": {
-                "name": "Acceleration"
+                "name": "Snabb spänningsökning"
             },
             "rapid_deceleration": {
-                "name": "Tröghet"
+                "name": "Snabbt spänningsfall"
             },
             "bluetooth_scanner": {
-                "name": "Skaner bluetooth"
+                "name": "Bluetooth-skanner"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 Volt",
-                "12v": "12 Volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Översvämmad syra-gränd (FLA)",
-                "agm": "Absorberande glasmatta (årsstämma)",
-                "gel": "Gelceller (gel)",
-                "nicd": "Nickel-Cadmia (NICD)",
-                "nimh": "Nickel-metallvatten (NIMH)",
+                "fla": "Våt blysyra (FLA)",
+                "agm": "AGM (absorberande glasfibermatta)",
+                "gel": "Gel",
+                "efb": "EFB (start-stopp)",
+                "nicd": "Nickel-kadmium (NiCd)",
+                "nimh": "Nickel-metallhydrid (NiMH)",
                 "liion": "Litiumjon (Li-ion)",
-                "lifepo4": "Litiumjärnfosfat (LifePo4)",
-                "lto": "Little Titanian (LTO)",
-                "custom": "Icke -standardbatteri",
-                "efb": "Enhanced flooded battery (EFB)"
+                "lifepo4": "Litiumjärnfosfat (LiFePO4)",
+                "lto": "Litiumtitanat (LTO)",
+                "custom": "Anpassad"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Stängd av BM6 -enheten",
-                "soc_sod": "Acceptor från förändringen/skickningstillståndet (SOC/SOD)",
-                "cvr_dvr": "Acceple Charaction/Söktid (CVR/DVR)"
+                "by_device": "Rapporteras av BM6",
+                "soc_sod": "Laddnings-/urladdningstillstånd (SoC/SoD)",
+                "cvr_dvr": "Spänningsintervall för laddning/urladdning (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
-                "unknown": "Okänd",
-                "ok": "OK",
-                "low_voltage": "Lågspänning",
-                "under_voltage": "För låg spänning",
-                "charging": "Landning",
-                "idle": "På tomgång",
-                "discharging": "Avlastning",
-                "over_voltage": "För högspänning"
+                "unknown": "Okänt",
+                "ok": "Normal",
+                "low_voltage": "Låg spänning",
+                "under_voltage": "Underspänning",
+                "charging": "Laddar",
+                "idle": "Vila",
+                "discharging": "Urladdas",
+                "over_voltage": "Överspänning"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "OK: s tillstånd började",
-            "start_low_voltage": "Lågspänning har börjat",
-            "under_voltage": "För låg spänning",
-            "start_discharging": "Lossning har börjat",
-            "start_idle": "Tomgångsläget har börjat",
-            "start_charging": "Laddning började",
-            "over_voltage": "För högspänning",
-            "state_changed": "Staten har förändrats"
+            "start_ok": "Blir normal",
+            "start_low_voltage": "Får låg spänning",
+            "under_voltage": "Får underspänning",
+            "start_discharging": "Börjar urladdas",
+            "start_idle": "Går i vila",
+            "start_charging": "Börjar laddas",
+            "over_voltage": "Får överspänning",
+            "state_changed": "Tillståndet ändras"
         }
     }
 }

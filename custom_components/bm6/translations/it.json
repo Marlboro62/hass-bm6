@@ -11,7 +11,8 @@
                     "update_interval": "Intervallo di aggiornamento dei dati",
                     "voltage_offset": "Correzione della tensione",
                     "temperature_offset": "Correzione della temperatura",
-                    "temperature_unit": "Unità di temperatura"
+                    "temperature_unit": "Unità di temperatura",
+                    "bluetooth_proxy": "Proxy Bluetooth"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "Configurazione del monitor BM6",
                 "description": "Parametri di configurazione della batteria personalizzati.",
                 "data": {
-                    "custom_dvr_min": "Tensione di scarico minima (DVR)",
-                    "custom_dvr_max": "Tensione di scarico massima (DVR)",
-                    "custom_cvr_min": "Tensione di ricarica minima (CVR)",
-                    "custom_cvr_max": "Tensione di ricarica massima (CVR)",
-                    "custom_soc_min": "Tensione di carica minima (SOC)",
-                    "custom_soc_max": "Tensione di carica massima (SOC)",
-                    "custom_sod_min": "Tensione di scarico minima (SOD)",
-                    "custom_sod_max": "Tensione di carica massima (SOD)"
+                    "custom_dvr_min": "Intervallo di scarica (DVR): tensione minima",
+                    "custom_dvr_max": "Intervallo di scarica (DVR): tensione massima",
+                    "custom_cvr_min": "Intervallo di carica (CVR): tensione minima",
+                    "custom_cvr_max": "Intervallo di carica (CVR): tensione massima",
+                    "custom_soc_min": "Stato di carica (SoC): tensione minima",
+                    "custom_soc_max": "Stato di carica (SoC): tensione massima",
+                    "custom_sod_min": "Stato di scarica (SoD): tensione minima",
+                    "custom_sod_max": "Stato di scarica (SoD): tensione massima"
                 }
             }
         },
@@ -49,14 +50,15 @@
     "options": {
         "step": {
             "init": {
-                "title": "Ri -configurazione del monitor BM6",
+                "title": "Ri-configurazione del monitor BM6",
                 "description": "Parametri di configurazione del dispositivo di base.",
                 "data": {
                     "state_algorithm": "Algoritmo di calcolo della batteria",
                     "update_interval": "Intervallo di aggiornamento dei dati",
                     "voltage_offset": "Correzione della tensione",
                     "temperature_offset": "Correzione della temperatura",
-                    "temperature_unit": "Unità di temperatura"
+                    "temperature_unit": "Unità di temperatura",
+                    "bluetooth_proxy": "Proxy Bluetooth"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "Configurazione del monitor BM6",
                 "description": "Parametri di configurazione della batteria personalizzati.",
                 "data": {
-                    "custom_dvr_min": "Tensione di scarico minima (DVR)",
-                    "custom_dvr_max": "Tensione di scarico massima (DVR)",
-                    "custom_cvr_min": "Tensione di ricarica minima (CVR)",
-                    "custom_cvr_max": "Tensione di ricarica massima (CVR)",
-                    "custom_soc_min": "Tensione di carica minima (SOC)",
-                    "custom_soc_max": "Tensione di carica massima (SOC)",
-                    "custom_sod_min": "Tensione di scarico minima (SOD)",
-                    "custom_sod_max": "Tensione di carica massima (SOD)"
+                    "custom_dvr_min": "Intervallo di scarica (DVR): tensione minima",
+                    "custom_dvr_max": "Intervallo di scarica (DVR): tensione massima",
+                    "custom_cvr_min": "Intervallo di carica (CVR): tensione minima",
+                    "custom_cvr_max": "Intervallo di carica (CVR): tensione massima",
+                    "custom_soc_min": "Stato di carica (SoC): tensione minima",
+                    "custom_soc_max": "Stato di carica (SoC): tensione massima",
+                    "custom_sod_min": "Stato di scarica (SoD): tensione minima",
+                    "custom_sod_max": "Stato di scarica (SoD): tensione massima"
                 }
             }
         },
@@ -96,7 +98,7 @@
                 "name": "Tensione",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Tensione effettiva"
+                        "name": "Tensione misurata"
                     },
                     "voltage_corrected": {
                         "name": "Tensione corretta"
@@ -107,7 +109,7 @@
                 "name": "Temperatura",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Temperatura effettiva"
+                        "name": "Temperatura misurata"
                     },
                     "temperature_corrected": {
                         "name": "Temperatura corretta"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Percentuale",
+                "name": "Carica",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Tensione corretta"
                     },
                     "percentage": {
-                        "name": "Percentuale"
+                        "name": "Carica"
                     },
                     "state_algorithm": {
                         "name": "Algoritmo di calcolo della batteria",
                         "state": {
-                            "by_device": "Calcolato dal dispositivo BM6",
-                            "soc_sod": "Calcolato dallo stato di carica/scarico (SOC/SOD)",
-                            "cvr_dvr": "Calcolato nella tensione di ricarica/scarico (CVR/DVR)"
+                            "by_device": "Fornito dal BM6",
+                            "soc_sod": "Stato di carica / scarica (SoC/SoD)",
+                            "cvr_dvr": "Intervalli di tensione di carica / scarica (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Tensione di scarico minima (DVR)"
+                        "name": "Intervallo di scarica (DVR): tensione minima"
                     },
                     "dvr_max": {
-                        "name": "Tensione di scarico massima (DVR)"
+                        "name": "Intervallo di scarica (DVR): tensione massima"
                     },
                     "cvr_min": {
-                        "name": "Tensione di ricarica minima (CVR)"
+                        "name": "Intervallo di carica (CVR): tensione minima"
                     },
                     "cvr_max": {
-                        "name": "Tensione di ricarica massima (CVR)"
+                        "name": "Intervallo di carica (CVR): tensione massima"
                     },
                     "sod_min": {
-                        "name": "Tensione di scarico minima (SOD)"
+                        "name": "Stato di scarica (SoD): tensione minima"
                     },
                     "sod_max": {
-                        "name": "Tensione di carica massima (SOD)"
+                        "name": "Stato di scarica (SoD): tensione massima"
                     },
                     "soc_min": {
-                        "name": "Tensione di carica minima (SOC)"
+                        "name": "Stato di carica (SoC): tensione minima"
                     },
                     "soc_max": {
-                        "name": "Tensione di carica massima (SOC)"
+                        "name": "Stato di carica (SoC): tensione massima"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Stato",
                 "state": {
                     "unknown": "Sconosciuto",
-                    "ok": "OK",
-                    "low_voltage": "Bassa tensione",
-                    "under_voltage": "Tensione troppo bassa",
-                    "charging": "Approdo",
-                    "idle": "Oziare",
-                    "discharging": "Scarico",
-                    "over_voltage": "Tensione troppo alta"
+                    "ok": "Normale",
+                    "low_voltage": "Tensione bassa",
+                    "under_voltage": "Sottotensione",
+                    "charging": "In carica",
+                    "idle": "A riposo",
+                    "discharging": "In scarica",
+                    "over_voltage": "Sovratensione"
                 }
             },
             "rssi": {
-                "name": "Forza del segnale (RSSI)"
+                "name": "Potenza del segnale"
             },
             "device_percentage": {
-                "name": "Percentuale del dispositivo"
+                "name": "Carica (BM6)"
             },
             "device_state": {
-                "name": "Condizione del dispositivo",
+                "name": "Stato (BM6)",
                 "state": {
                     "unknown": "Sconosciuto",
-                    "ok": "OK",
-                    "low_voltage": "Bassa tensione",
-                    "charging": "Approdo"
+                    "ok": "Normale",
+                    "low_voltage": "Tensione bassa",
+                    "charging": "In carica"
                 }
             },
             "rapid_acceleration": {
-                "name": "Accelerazione"
+                "name": "Aumento rapido di tensione"
             },
             "rapid_deceleration": {
-                "name": "Lentezza"
+                "name": "Calo rapido di tensione"
             },
             "bluetooth_scanner": {
-                "name": "Skaner Bluetooth"
+                "name": "Scanner Bluetooth"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 volt",
-                "12v": "12 volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Acido allagato (FLA)",
-                "agm": "Assorbimento del tappetino di vetro (AGM)",
-                "gel": "Cellule gel (gel)",
-                "nicd": "Nickel-Cadmia (NICD)",
-                "nimh": "Nickel-Metal-Water (NIMH)",
-                "liion": "Ioni di litio (li-ion)",
-                "lifepo4": "Fosfato di ferro al litio (LifePO4)",
-                "lto": "Little Titanian (LTO)",
-                "custom": "Batteria non standard",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Piombo-acido aperta (FLA)",
+                "agm": "AGM (fibra di vetro assorbente)",
+                "gel": "Gel",
+                "efb": "EFB (start & stop)",
+                "nicd": "Nichel-cadmio (NiCd)",
+                "nimh": "Nichel-metallo idruro (NiMH)",
+                "liion": "Ioni di litio (Li-ion)",
+                "lifepo4": "Litio ferro fosfato (LiFePO4)",
+                "lto": "Titanato di litio (LTO)",
+                "custom": "Personalizzata"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Chiuso dal dispositivo BM6",
-                "soc_sod": "Accettore dallo stato di cambiamento/invio (SOC/SOD)",
-                "cvr_dvr": "Acceple Caraction/Invio Tempo (CVR/DVR)"
+                "by_device": "Fornito dal BM6",
+                "soc_sod": "Stato di carica / scarica (SoC/SoD)",
+                "cvr_dvr": "Intervalli di tensione di carica / scarica (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Sconosciuto",
-                "ok": "OK",
-                "low_voltage": "Bassa tensione",
-                "under_voltage": "Tensione troppo bassa",
-                "charging": "Approdo",
-                "idle": "Oziare",
-                "discharging": "Scarico",
-                "over_voltage": "Tensione troppo alta"
+                "ok": "Normale",
+                "low_voltage": "Tensione bassa",
+                "under_voltage": "Sottotensione",
+                "charging": "In carica",
+                "idle": "A riposo",
+                "discharging": "In scarica",
+                "over_voltage": "Sovratensione"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "Le condizioni di OK sono iniziate",
-            "start_low_voltage": "È iniziata una bassa tensione",
-            "under_voltage": "Tensione troppo bassa",
-            "start_discharging": "Lo scarico è iniziato",
-            "start_idle": "La modalità inattiva è iniziata",
-            "start_charging": "La ricarica è iniziata",
-            "over_voltage": "Tensione troppo alta",
-            "state_changed": "Lo stato è cambiato"
+            "start_ok": "Diventa normale",
+            "start_low_voltage": "Passa a tensione bassa",
+            "under_voltage": "Passa in sottotensione",
+            "start_discharging": "Inizia a scaricarsi",
+            "start_idle": "Passa a riposo",
+            "start_charging": "Inizia a caricarsi",
+            "over_voltage": "Passa in sovratensione",
+            "state_changed": "Lo stato cambia"
         }
     }
 }

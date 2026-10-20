@@ -11,7 +11,8 @@
                     "update_interval": "Gagnauppfærslu bil",
                     "voltage_offset": "Spennaleiðrétting",
                     "temperature_offset": "Leiðrétting hitastigs",
-                    "temperature_unit": "Hitastig eining"
+                    "temperature_unit": "Hitastig eining",
+                    "bluetooth_proxy": "Bluetooth-milliþjónn"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "BM6 Monitor stillingar",
                 "description": "Sérsniðnar stillingar rafhlöðu.",
                 "data": {
-                    "custom_dvr_min": "Lágmarks losunarspenna (DVR)",
-                    "custom_dvr_max": "Hámarks losunarspenna (DVR)",
-                    "custom_cvr_min": "Lágmarks hleðsluspenna (CVR)",
-                    "custom_cvr_max": "Hámarks hleðsluspenna (CVR)",
-                    "custom_soc_min": "Lágmarks hleðsluspenna (SOC)",
-                    "custom_soc_max": "Hámarks hleðsluspenna (SOC)",
-                    "custom_sod_min": "Lágmarks losunarspenna (SOD)",
-                    "custom_sod_max": "Hámarks hleðsluspenna (SOD)"
+                    "custom_dvr_min": "Afhleðslubil (DVR): lágmarksspenna",
+                    "custom_dvr_max": "Afhleðslubil (DVR): hámarksspenna",
+                    "custom_cvr_min": "Hleðslubil (CVR): lágmarksspenna",
+                    "custom_cvr_max": "Hleðslubil (CVR): hámarksspenna",
+                    "custom_soc_min": "Hleðslustaða (SoC): lágmarksspenna",
+                    "custom_soc_max": "Hleðslustaða (SoC): hámarksspenna",
+                    "custom_sod_min": "Afhleðslustaða (SoD): lágmarksspenna",
+                    "custom_sod_max": "Afhleðslustaða (SoD): hámarksspenna"
                 }
             }
         },
@@ -49,14 +50,15 @@
     "options": {
         "step": {
             "init": {
-                "title": "Re -stilling BM6 skjásins",
+                "title": "Re-stilling BM6 skjásins",
                 "description": "Grunnstillingarstillingar.",
                 "data": {
                     "state_algorithm": "Ragnaralgrími rafhlöðu",
                     "update_interval": "Gagnauppfærslu bil",
                     "voltage_offset": "Spennaleiðrétting",
                     "temperature_offset": "Leiðrétting hitastigs",
-                    "temperature_unit": "Hitastig eining"
+                    "temperature_unit": "Hitastig eining",
+                    "bluetooth_proxy": "Bluetooth-milliþjónn"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "BM6 Monitor stillingar",
                 "description": "Sérsniðnar stillingar rafhlöðu.",
                 "data": {
-                    "custom_dvr_min": "Lágmarks losunarspenna (DVR)",
-                    "custom_dvr_max": "Hámarks losunarspenna (DVR)",
-                    "custom_cvr_min": "Lágmarks hleðsluspenna (CVR)",
-                    "custom_cvr_max": "Hámarks hleðsluspenna (CVR)",
-                    "custom_soc_min": "Lágmarks hleðsluspenna (SOC)",
-                    "custom_soc_max": "Hámarks hleðsluspenna (SOC)",
-                    "custom_sod_min": "Lágmarks losunarspenna (SOD)",
-                    "custom_sod_max": "Hámarks hleðsluspenna (SOD)"
+                    "custom_dvr_min": "Afhleðslubil (DVR): lágmarksspenna",
+                    "custom_dvr_max": "Afhleðslubil (DVR): hámarksspenna",
+                    "custom_cvr_min": "Hleðslubil (CVR): lágmarksspenna",
+                    "custom_cvr_max": "Hleðslubil (CVR): hámarksspenna",
+                    "custom_soc_min": "Hleðslustaða (SoC): lágmarksspenna",
+                    "custom_soc_max": "Hleðslustaða (SoC): hámarksspenna",
+                    "custom_sod_min": "Afhleðslustaða (SoD): lágmarksspenna",
+                    "custom_sod_max": "Afhleðslustaða (SoD): hámarksspenna"
                 }
             }
         },
@@ -96,7 +98,7 @@
                 "name": "Spenna",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Raunveruleg spenna"
+                        "name": "Mæld spenna"
                     },
                     "voltage_corrected": {
                         "name": "Leiðrétt spenna"
@@ -107,7 +109,7 @@
                 "name": "Hitastig",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Raunverulegt hitastig"
+                        "name": "Mælt hitastig"
                     },
                     "temperature_corrected": {
                         "name": "Leiðrétt hitastig"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Prósent",
+                "name": "Hleðsla",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Leiðrétt spenna"
                     },
                     "percentage": {
-                        "name": "Prósent"
+                        "name": "Hleðsla"
                     },
                     "state_algorithm": {
                         "name": "Ragnaralgrími rafhlöðu",
                         "state": {
-                            "by_device": "Reiknað með BM6 tækinu",
-                            "soc_sod": "Reiknað út frá hleðslu/útskrift (SOC/SOD)",
-                            "cvr_dvr": "Reiknuð í hleðslu/losunarspennu (CVR/DVR)"
+                            "by_device": "Frá BM6",
+                            "soc_sod": "Hleðslu-/afhleðslustaða (SoC/SoD)",
+                            "cvr_dvr": "Spennubil hleðslu/afhleðslu (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Lágmarks losunarspenna (DVR)"
+                        "name": "Afhleðslubil (DVR): lágmarksspenna"
                     },
                     "dvr_max": {
-                        "name": "Hámarks losunarspenna (DVR)"
+                        "name": "Afhleðslubil (DVR): hámarksspenna"
                     },
                     "cvr_min": {
-                        "name": "Lágmarks hleðsluspenna (CVR)"
+                        "name": "Hleðslubil (CVR): lágmarksspenna"
                     },
                     "cvr_max": {
-                        "name": "Hámarks hleðsluspenna (CVR)"
+                        "name": "Hleðslubil (CVR): hámarksspenna"
                     },
                     "sod_min": {
-                        "name": "Lágmarks losunarspenna (SOD)"
+                        "name": "Afhleðslustaða (SoD): lágmarksspenna"
                     },
                     "sod_max": {
-                        "name": "Hámarks hleðsluspenna (SOD)"
+                        "name": "Afhleðslustaða (SoD): hámarksspenna"
                     },
                     "soc_min": {
-                        "name": "Lágmarks hleðsluspenna (SOC)"
+                        "name": "Hleðslustaða (SoC): lágmarksspenna"
                     },
                     "soc_max": {
-                        "name": "Hámarks hleðsluspenna (SOC)"
+                        "name": "Hleðslustaða (SoC): hámarksspenna"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Staða",
                 "state": {
                     "unknown": "Óþekkt",
-                    "ok": "OK",
+                    "ok": "Eðlileg",
                     "low_voltage": "Lág spenna",
-                    "under_voltage": "Of lágspenna",
-                    "charging": "Lending",
-                    "idle": "Aðgerðalaus",
-                    "discharging": "Losun",
-                    "over_voltage": "Of háspenna"
+                    "under_voltage": "Undirspenna",
+                    "charging": "Í hleðslu",
+                    "idle": "Í hvíld",
+                    "discharging": "Afhleðst",
+                    "over_voltage": "Yfirspenna"
                 }
             },
             "rssi": {
-                "name": "Signal Force (RSSI)"
+                "name": "Merkisstyrkur"
             },
             "device_percentage": {
-                "name": "Hlutfall tækisins"
+                "name": "Hleðsla (BM6)"
             },
             "device_state": {
-                "name": "Ástand tækisins",
+                "name": "Staða (BM6)",
                 "state": {
                     "unknown": "Óþekkt",
-                    "ok": "OK",
+                    "ok": "Eðlileg",
                     "low_voltage": "Lág spenna",
-                    "charging": "Lending"
+                    "charging": "Í hleðslu"
                 }
             },
             "rapid_acceleration": {
-                "name": "Hröðun"
+                "name": "Hröð spennuhækkun"
             },
             "rapid_deceleration": {
-                "name": "Hægð"
+                "name": "Hröð spennulækkun"
             },
             "bluetooth_scanner": {
-                "name": "Skaner Bluetooth"
+                "name": "Bluetooth-skanni"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 volt",
-                "12v": "12 volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Flóð sýru-alley (FLA)",
-                "agm": "Frásogandi glermat (aðalfundur)",
-                "gel": "Hlaupfrumur (hlaup)",
-                "nicd": "Nikkel-Cadmia (NICD)",
-                "nimh": "Nikkel-metal-vatn (NIMH)",
-                "liion": "Litíumjónar (Li-Ion)",
-                "lifepo4": "Litíum járnfosfat (LIFEPO4)",
-                "lto": "Litli Títan (LTO)",
-                "custom": "Óstaðlað rafhlaða",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Opin blýsýra (FLA)",
+                "agm": "AGM (glertrefjamotta)",
+                "gel": "Gel",
+                "efb": "EFB (start-stopp)",
+                "nicd": "Nikkel-kadmíum (NiCd)",
+                "nimh": "Nikkel-málmhýdríð (NiMH)",
+                "liion": "Litíumjón (Li-ion)",
+                "lifepo4": "Litíumjárnfosfat (LiFePO4)",
+                "lto": "Litíumtítanat (LTO)",
+                "custom": "Sérsniðin"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Lokað með BM6 tækinu",
-                "soc_sod": "Samþykki frá breytingunni/sendingarástandi (SOC/SOD)",
-                "cvr_dvr": "Acceple charaction/sendingartími (CVR/DVR)"
+                "by_device": "Frá BM6",
+                "soc_sod": "Hleðslu-/afhleðslustaða (SoC/SoD)",
+                "cvr_dvr": "Spennubil hleðslu/afhleðslu (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Óþekkt",
-                "ok": "OK",
+                "ok": "Eðlileg",
                 "low_voltage": "Lág spenna",
-                "under_voltage": "Of lágspenna",
-                "charging": "Lending",
-                "idle": "Aðgerðalaus",
-                "discharging": "Losun",
-                "over_voltage": "Of háspenna"
+                "under_voltage": "Undirspenna",
+                "charging": "Í hleðslu",
+                "idle": "Í hvíld",
+                "discharging": "Afhleðst",
+                "over_voltage": "Yfirspenna"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "Ástand OK hófst",
-            "start_low_voltage": "Lág spenna er hafin",
-            "under_voltage": "Of lágspenna",
-            "start_discharging": "Losun er hafin",
-            "start_idle": "Aðgerðalaus stilling er hafin",
-            "start_charging": "Hleðsla hófst",
-            "over_voltage": "Of háspenna",
-            "state_changed": "Ríkið hefur breyst"
+            "start_ok": "Verður eðlileg",
+            "start_low_voltage": "Spenna verður lág",
+            "under_voltage": "Fer í undirspennu",
+            "start_discharging": "Byrjar að afhlaðast",
+            "start_idle": "Fer í hvíld",
+            "start_charging": "Byrjar að hlaðast",
+            "over_voltage": "Fer í yfirspennu",
+            "state_changed": "Staða breytist"
         }
     }
 }

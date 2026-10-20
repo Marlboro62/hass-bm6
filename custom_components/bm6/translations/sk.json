@@ -11,7 +11,8 @@
                     "update_interval": "Interval aktualizácie údajov",
                     "voltage_offset": "Korekcia napätia",
                     "temperature_offset": "Korekcia teploty",
-                    "temperature_unit": "Teplotná jednotka"
+                    "temperature_unit": "Teplotná jednotka",
+                    "bluetooth_proxy": "Bluetooth proxy"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "Konfigurácia monitora BM6",
                 "description": "Vlastné parametre konfigurácie batérie.",
                 "data": {
-                    "custom_dvr_min": "Minimálne vykladacie napätie (DVR)",
-                    "custom_dvr_max": "Maximálne vykladacie napätie (DVR)",
-                    "custom_cvr_min": "Minimálne nabíjacie napätie (CVR)",
-                    "custom_cvr_max": "Maximálne nabíjacie napätie (CVR)",
-                    "custom_soc_min": "Minimálne napätie nabíjania (SOC)",
-                    "custom_soc_max": "Maximálne napätie nabíjania (SOC)",
-                    "custom_sod_min": "Minimálne vypúšťacie napätie (SOD)",
-                    "custom_sod_max": "Maximálne napätie náboja (SOD)"
+                    "custom_dvr_min": "Rozsah vybíjania (DVR): minimálne napätie",
+                    "custom_dvr_max": "Rozsah vybíjania (DVR): maximálne napätie",
+                    "custom_cvr_min": "Rozsah nabíjania (CVR): minimálne napätie",
+                    "custom_cvr_max": "Rozsah nabíjania (CVR): maximálne napätie",
+                    "custom_soc_min": "Stav nabitia (SoC): minimálne napätie",
+                    "custom_soc_max": "Stav nabitia (SoC): maximálne napätie",
+                    "custom_sod_min": "Stav vybitia (SoD): minimálne napätie",
+                    "custom_sod_max": "Stav vybitia (SoD): maximálne napätie"
                 }
             }
         },
@@ -56,7 +57,8 @@
                     "update_interval": "Interval aktualizácie údajov",
                     "voltage_offset": "Korekcia napätia",
                     "temperature_offset": "Korekcia teploty",
-                    "temperature_unit": "Teplotná jednotka"
+                    "temperature_unit": "Teplotná jednotka",
+                    "bluetooth_proxy": "Bluetooth proxy"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "Konfigurácia monitora BM6",
                 "description": "Vlastné parametre konfigurácie batérie.",
                 "data": {
-                    "custom_dvr_min": "Minimálne vykladacie napätie (DVR)",
-                    "custom_dvr_max": "Maximálne vykladacie napätie (DVR)",
-                    "custom_cvr_min": "Minimálne nabíjacie napätie (CVR)",
-                    "custom_cvr_max": "Maximálne nabíjacie napätie (CVR)",
-                    "custom_soc_min": "Minimálne napätie nabíjania (SOC)",
-                    "custom_soc_max": "Maximálne napätie nabíjania (SOC)",
-                    "custom_sod_min": "Minimálne vypúšťacie napätie (SOD)",
-                    "custom_sod_max": "Maximálne napätie náboja (SOD)"
+                    "custom_dvr_min": "Rozsah vybíjania (DVR): minimálne napätie",
+                    "custom_dvr_max": "Rozsah vybíjania (DVR): maximálne napätie",
+                    "custom_cvr_min": "Rozsah nabíjania (CVR): minimálne napätie",
+                    "custom_cvr_max": "Rozsah nabíjania (CVR): maximálne napätie",
+                    "custom_soc_min": "Stav nabitia (SoC): minimálne napätie",
+                    "custom_soc_max": "Stav nabitia (SoC): maximálne napätie",
+                    "custom_sod_min": "Stav vybitia (SoD): minimálne napätie",
+                    "custom_sod_max": "Stav vybitia (SoD): maximálne napätie"
                 }
             }
         },
@@ -96,10 +98,10 @@
                 "name": "Napätie",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Skutočné napätie"
+                        "name": "Namerané napätie"
                     },
                     "voltage_corrected": {
-                        "name": "Opravené napätie"
+                        "name": "Korigované napätie"
                     }
                 }
             },
@@ -107,10 +109,10 @@
                 "name": "Teplota",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Skutočná teplota"
+                        "name": "Nameraná teplota"
                     },
                     "temperature_corrected": {
-                        "name": "Opravená teplota"
+                        "name": "Korigovaná teplota"
                     },
                     "temperature_unit": {
                         "name": "Teplotná jednotka"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Percento",
+                "name": "Nabitie",
                 "state_attributes": {
                     "voltage_corrected": {
-                        "name": "Opravené napätie"
+                        "name": "Korigované napätie"
                     },
                     "percentage": {
-                        "name": "Percento"
+                        "name": "Nabitie"
                     },
                     "state_algorithm": {
                         "name": "Algoritmus výpočtu batérie",
                         "state": {
-                            "by_device": "Vypočítané zariadením BM6",
-                            "soc_sod": "Vypočítané zo stavu náboja/výboja (SOC/SOD)",
-                            "cvr_dvr": "Vypočítané v nabíjaní/výbojovom napätí (CVR/DVR)"
+                            "by_device": "Hlásené zariadením BM6",
+                            "soc_sod": "Stav nabitia / vybitia (SoC/SoD)",
+                            "cvr_dvr": "Rozsahy napätia nabíjania / vybíjania (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minimálne vykladacie napätie (DVR)"
+                        "name": "Rozsah vybíjania (DVR): minimálne napätie"
                     },
                     "dvr_max": {
-                        "name": "Maximálne vykladacie napätie (DVR)"
+                        "name": "Rozsah vybíjania (DVR): maximálne napätie"
                     },
                     "cvr_min": {
-                        "name": "Minimálne nabíjacie napätie (CVR)"
+                        "name": "Rozsah nabíjania (CVR): minimálne napätie"
                     },
                     "cvr_max": {
-                        "name": "Maximálne nabíjacie napätie (CVR)"
+                        "name": "Rozsah nabíjania (CVR): maximálne napätie"
                     },
                     "sod_min": {
-                        "name": "Minimálne vypúšťacie napätie (SOD)"
+                        "name": "Stav vybitia (SoD): minimálne napätie"
                     },
                     "sod_max": {
-                        "name": "Maximálne napätie náboja (SOD)"
+                        "name": "Stav vybitia (SoD): maximálne napätie"
                     },
                     "soc_min": {
-                        "name": "Minimálne napätie nabíjania (SOC)"
+                        "name": "Stav nabitia (SoC): minimálne napätie"
                     },
                     "soc_max": {
-                        "name": "Maximálne napätie nabíjania (SOC)"
+                        "name": "Stav nabitia (SoC): maximálne napätie"
                     }
                 }
             },
             "state": {
-                "name": "Stan",
+                "name": "Stav",
                 "state": {
                     "unknown": "Neznámy",
-                    "ok": "V poriadku",
+                    "ok": "Normálny",
                     "low_voltage": "Nízke napätie",
-                    "under_voltage": "Príliš nízke napätie",
-                    "charging": "Pristátie",
-                    "idle": "Nečinný",
-                    "discharging": "Vykladanie",
-                    "over_voltage": "Príliš vysoké napätie"
+                    "under_voltage": "Podpätie",
+                    "charging": "Nabíjanie",
+                    "idle": "Pokoj",
+                    "discharging": "Vybíjanie",
+                    "over_voltage": "Prepätie"
                 }
             },
             "rssi": {
-                "name": "Signálna sila (RSSI)"
+                "name": "Sila signálu"
             },
             "device_percentage": {
-                "name": "Percento zariadenia"
+                "name": "Nabitie (BM6)"
             },
             "device_state": {
-                "name": "Stav zariadenia",
+                "name": "Stav (BM6)",
                 "state": {
                     "unknown": "Neznámy",
-                    "ok": "V poriadku",
+                    "ok": "Normálny",
                     "low_voltage": "Nízke napätie",
-                    "charging": "Pristátie"
+                    "charging": "Nabíjanie"
                 }
             },
             "rapid_acceleration": {
-                "name": "Zrýchlenie"
+                "name": "Rýchly nárast napätia"
             },
             "rapid_deceleration": {
-                "name": "Pomalosť"
+                "name": "Rýchly pokles napätia"
             },
             "bluetooth_scanner": {
-                "name": "Skaner Bluetooth"
+                "name": "Bluetooth skener"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 volt",
-                "12v": "12 volt"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Zaplavená kyselina-muška (FLA)",
-                "agm": "Absorbujúca sklenená rohož (AGM)",
-                "gel": "Gélové bunky (gél)",
-                "nicd": "Nickel-Cadmia (NICD)",
-                "nimh": "Niklová voda (NIMH)",
-                "liion": "Lítium-ión (li-ión)",
-                "lifepo4": "Fosforečnan lítium (LiFEPO4)",
-                "lto": "Little Titan (LTO)",
-                "custom": "Neštandardná batéria",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Olovená zaplavená (FLA)",
+                "agm": "AGM (sklená vata)",
+                "gel": "Gélová",
+                "efb": "EFB (štart-stop)",
+                "nicd": "Nikel-kadmiová (NiCd)",
+                "nimh": "Nikel-metal hydridová (NiMH)",
+                "liion": "Lítium-iónová (Li-ion)",
+                "lifepo4": "Lítium-železo-fosfátová (LiFePO4)",
+                "lto": "Lítium-titanátová (LTO)",
+                "custom": "Vlastná"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Uzavreté zariadením BM6",
-                "soc_sod": "Akceptor zo stavu zmeny/odosielania (SOC/SOD)",
-                "cvr_dvr": "Acceple Laction/čas odosielania (CVR/DVR)"
+                "by_device": "Hlásené zariadením BM6",
+                "soc_sod": "Stav nabitia / vybitia (SoC/SoD)",
+                "cvr_dvr": "Rozsahy napätia nabíjania / vybíjania (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Neznámy",
-                "ok": "V poriadku",
+                "ok": "Normálny",
                 "low_voltage": "Nízke napätie",
-                "under_voltage": "Príliš nízke napätie",
-                "charging": "Pristátie",
-                "idle": "Nečinný",
-                "discharging": "Vykladanie",
-                "over_voltage": "Príliš vysoké napätie"
+                "under_voltage": "Podpätie",
+                "charging": "Nabíjanie",
+                "idle": "Pokoj",
+                "discharging": "Vybíjanie",
+                "over_voltage": "Prepätie"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "OK sa začal stav",
-            "start_low_voltage": "Začalo sa nízke napätie",
-            "under_voltage": "Príliš nízke napätie",
-            "start_discharging": "Vykladanie sa začalo",
-            "start_idle": "Nečinný režim sa začal",
-            "start_charging": "Začalo sa nabíjanie",
-            "over_voltage": "Príliš vysoké napätie",
-            "state_changed": "Štát sa zmenil"
+            "start_ok": "Prejde do normálu",
+            "start_low_voltage": "Prejde na nízke napätie",
+            "under_voltage": "Prejde do podpätia",
+            "start_discharging": "Začne sa vybíjať",
+            "start_idle": "Prejde do pokoja",
+            "start_charging": "Začne sa nabíjať",
+            "over_voltage": "Prejde do prepätia",
+            "state_changed": "Stav sa zmení"
         }
     }
 }

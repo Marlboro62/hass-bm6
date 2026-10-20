@@ -11,7 +11,8 @@
                     "update_interval": "Διάστημα ενημέρωσης δεδομένων",
                     "voltage_offset": "Διόρθωση τάσης",
                     "temperature_offset": "Διόρθωση θερμοκρασίας",
-                    "temperature_unit": "Μονάδα θερμοκρασίας"
+                    "temperature_unit": "Μονάδα θερμοκρασίας",
+                    "bluetooth_proxy": "Διακομιστής μεσολάβησης Bluetooth"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "Διαμόρφωση παρακολούθησης BM6",
                 "description": "Προσαρμοσμένες παραμέτρους διαμόρφωσης μπαταρίας.",
                 "data": {
-                    "custom_dvr_min": "Ελάχιστη τάση εκφόρτωσης (DVR)",
-                    "custom_dvr_max": "Μέγιστη τάση εκφόρτωσης (DVR)",
-                    "custom_cvr_min": "Ελάχιστη τάση φόρτισης (CVR)",
-                    "custom_cvr_max": "Μέγιστη τάση φόρτισης (CVR)",
-                    "custom_soc_min": "Ελάχιστη τάση φόρτισης (SOC)",
-                    "custom_soc_max": "Μέγιστη τάση φόρτισης (SOC)",
-                    "custom_sod_min": "Ελάχιστη τάση εκφόρτισης (SOD)",
-                    "custom_sod_max": "Μέγιστη τάση φόρτισης (SOD)"
+                    "custom_dvr_min": "Εύρος εκφόρτισης (DVR): ελάχιστη τάση",
+                    "custom_dvr_max": "Εύρος εκφόρτισης (DVR): μέγιστη τάση",
+                    "custom_cvr_min": "Εύρος φόρτισης (CVR): ελάχιστη τάση",
+                    "custom_cvr_max": "Εύρος φόρτισης (CVR): μέγιστη τάση",
+                    "custom_soc_min": "Κατάσταση φόρτισης (SoC): ελάχιστη τάση",
+                    "custom_soc_max": "Κατάσταση φόρτισης (SoC): μέγιστη τάση",
+                    "custom_sod_min": "Κατάσταση εκφόρτισης (SoD): ελάχιστη τάση",
+                    "custom_sod_max": "Κατάσταση εκφόρτισης (SoD): μέγιστη τάση"
                 }
             }
         },
@@ -56,7 +57,8 @@
                     "update_interval": "Διάστημα ενημέρωσης δεδομένων",
                     "voltage_offset": "Διόρθωση τάσης",
                     "temperature_offset": "Διόρθωση θερμοκρασίας",
-                    "temperature_unit": "Μονάδα θερμοκρασίας"
+                    "temperature_unit": "Μονάδα θερμοκρασίας",
+                    "bluetooth_proxy": "Διακομιστής μεσολάβησης Bluetooth"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "Διαμόρφωση παρακολούθησης BM6",
                 "description": "Προσαρμοσμένες παραμέτρους διαμόρφωσης μπαταρίας.",
                 "data": {
-                    "custom_dvr_min": "Ελάχιστη τάση εκφόρτωσης (DVR)",
-                    "custom_dvr_max": "Μέγιστη τάση εκφόρτωσης (DVR)",
-                    "custom_cvr_min": "Ελάχιστη τάση φόρτισης (CVR)",
-                    "custom_cvr_max": "Μέγιστη τάση φόρτισης (CVR)",
-                    "custom_soc_min": "Ελάχιστη τάση φόρτισης (SOC)",
-                    "custom_soc_max": "Μέγιστη τάση φόρτισης (SOC)",
-                    "custom_sod_min": "Ελάχιστη τάση εκφόρτισης (SOD)",
-                    "custom_sod_max": "Μέγιστη τάση φόρτισης (SOD)"
+                    "custom_dvr_min": "Εύρος εκφόρτισης (DVR): ελάχιστη τάση",
+                    "custom_dvr_max": "Εύρος εκφόρτισης (DVR): μέγιστη τάση",
+                    "custom_cvr_min": "Εύρος φόρτισης (CVR): ελάχιστη τάση",
+                    "custom_cvr_max": "Εύρος φόρτισης (CVR): μέγιστη τάση",
+                    "custom_soc_min": "Κατάσταση φόρτισης (SoC): ελάχιστη τάση",
+                    "custom_soc_max": "Κατάσταση φόρτισης (SoC): μέγιστη τάση",
+                    "custom_sod_min": "Κατάσταση εκφόρτισης (SoD): ελάχιστη τάση",
+                    "custom_sod_max": "Κατάσταση εκφόρτισης (SoD): μέγιστη τάση"
                 }
             }
         },
@@ -93,10 +95,10 @@
     "entity": {
         "sensor": {
             "voltage": {
-                "name": "Ενταση",
+                "name": "Τάση",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Πραγματική ένταση"
+                        "name": "Μετρούμενη τάση"
                     },
                     "voltage_corrected": {
                         "name": "Διορθωμένη τάση"
@@ -107,7 +109,7 @@
                 "name": "Θερμοκρασία",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Πραγματική θερμοκρασία"
+                        "name": "Μετρούμενη θερμοκρασία"
                     },
                     "temperature_corrected": {
                         "name": "Διορθωμένη θερμοκρασία"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Τοις εκατό",
+                "name": "Επίπεδο φόρτισης",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Διορθωμένη τάση"
                     },
                     "percentage": {
-                        "name": "Τοις εκατό"
+                        "name": "Επίπεδο φόρτισης"
                     },
                     "state_algorithm": {
                         "name": "Αλγόριθμος υπολογισμού μπαταρίας",
                         "state": {
-                            "by_device": "Υπολογίζεται από τη συσκευή BM6",
-                            "soc_sod": "Υπολογίζεται από την κατάσταση φόρτισης/εκφόρτισης (SOC/SOD)",
-                            "cvr_dvr": "Υπολογίζεται στην τάση φόρτισης/εκφόρτισης (CVR/DVR)"
+                            "by_device": "Από τη συσκευή BM6",
+                            "soc_sod": "Κατάσταση φόρτισης / εκφόρτισης (SoC/SoD)",
+                            "cvr_dvr": "Εύρη τάσης φόρτισης / εκφόρτισης (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Ελάχιστη τάση εκφόρτωσης (DVR)"
+                        "name": "Εύρος εκφόρτισης (DVR): ελάχιστη τάση"
                     },
                     "dvr_max": {
-                        "name": "Μέγιστη τάση εκφόρτωσης (DVR)"
+                        "name": "Εύρος εκφόρτισης (DVR): μέγιστη τάση"
                     },
                     "cvr_min": {
-                        "name": "Ελάχιστη τάση φόρτισης (CVR)"
+                        "name": "Εύρος φόρτισης (CVR): ελάχιστη τάση"
                     },
                     "cvr_max": {
-                        "name": "Μέγιστη τάση φόρτισης (CVR)"
+                        "name": "Εύρος φόρτισης (CVR): μέγιστη τάση"
                     },
                     "sod_min": {
-                        "name": "Ελάχιστη τάση εκφόρτισης (SOD)"
+                        "name": "Κατάσταση εκφόρτισης (SoD): ελάχιστη τάση"
                     },
                     "sod_max": {
-                        "name": "Μέγιστη τάση φόρτισης (SOD)"
+                        "name": "Κατάσταση εκφόρτισης (SoD): μέγιστη τάση"
                     },
                     "soc_min": {
-                        "name": "Ελάχιστη τάση φόρτισης (SOC)"
+                        "name": "Κατάσταση φόρτισης (SoC): ελάχιστη τάση"
                     },
                     "soc_max": {
-                        "name": "Μέγιστη τάση φόρτισης (SOC)"
+                        "name": "Κατάσταση φόρτισης (SoC): μέγιστη τάση"
                     }
                 }
             },
             "state": {
-                "name": "Σταυρός",
+                "name": "Κατάσταση",
                 "state": {
-                    "unknown": "Αγνωστος",
-                    "ok": "ΕΝΤΑΞΕΙ",
+                    "unknown": "Άγνωστη",
+                    "ok": "Κανονική",
                     "low_voltage": "Χαμηλή τάση",
-                    "under_voltage": "Πολύ χαμηλή τάση",
-                    "charging": "Προσγείωση",
-                    "idle": "Αεργος",
-                    "discharging": "Εκφόρτωση",
-                    "over_voltage": "Πολύ υψηλή τάση"
+                    "under_voltage": "Υπόταση",
+                    "charging": "Φόρτιση",
+                    "idle": "Αδράνεια",
+                    "discharging": "Εκφόρτιση",
+                    "over_voltage": "Υπέρταση"
                 }
             },
             "rssi": {
-                "name": "Δύναμη σήματος (RSSI)"
+                "name": "Ισχύς σήματος"
             },
             "device_percentage": {
-                "name": "Ποσοστό της συσκευής"
+                "name": "Επίπεδο φόρτισης (BM6)"
             },
             "device_state": {
-                "name": "Κατάσταση της συσκευής",
+                "name": "Κατάσταση (BM6)",
                 "state": {
-                    "unknown": "Αγνωστος",
-                    "ok": "ΕΝΤΑΞΕΙ",
+                    "unknown": "Άγνωστη",
+                    "ok": "Κανονική",
                     "low_voltage": "Χαμηλή τάση",
-                    "charging": "Προσγείωση"
+                    "charging": "Φόρτιση"
                 }
             },
             "rapid_acceleration": {
-                "name": "Επιτάχυνση"
+                "name": "Ταχεία αύξηση τάσης"
             },
             "rapid_deceleration": {
-                "name": "Βραδύτης"
+                "name": "Ταχεία πτώση τάσης"
             },
             "bluetooth_scanner": {
-                "name": "Skaner Bluetooth"
+                "name": "Σαρωτής Bluetooth"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 βολτ",
-                "12v": "12 βολτ"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Πλημμυρισμένο οξύ-αλήο (FLA)",
-                "agm": "Απορροφητικό γυαλί (AGM)",
-                "gel": "Κύτταρα πηκτής (πήκτωμα)",
-                "nicd": "Νικελίου-Καντμία (NICD)",
-                "nimh": "Νικελίου-μετάλλιο-νερό (NIMH)",
-                "liion": "Ιόν λιθίου (Li-ion)",
-                "lifepo4": "Φωσφορικό σίδερο λιθίου (LifePo4)",
-                "lto": "Little Titanian (LTO)",
-                "custom": "Μη τυπική μπαταρία",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Ανοιχτού τύπου μολύβδου-οξέος (FLA)",
+                "agm": "AGM (υαλοβάμβακας)",
+                "gel": "Gel",
+                "efb": "EFB (start-stop)",
+                "nicd": "Νικελίου-καδμίου (NiCd)",
+                "nimh": "Νικελίου-υδριδίου μετάλλου (NiMH)",
+                "liion": "Ιόντων λιθίου (Li-ion)",
+                "lifepo4": "Φωσφορικού σιδήρου λιθίου (LiFePO4)",
+                "lto": "Τιτανικού λιθίου (LTO)",
+                "custom": "Προσαρμοσμένη"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Κλειστό από τη συσκευή BM6",
-                "soc_sod": "Αποδέκτης από την κατάσταση αλλαγής/αποστολής (SOC/SOD)",
-                "cvr_dvr": "Acceple Charaction/Χρόνος αποστολής (CVR/DVR)"
+                "by_device": "Από τη συσκευή BM6",
+                "soc_sod": "Κατάσταση φόρτισης / εκφόρτισης (SoC/SoD)",
+                "cvr_dvr": "Εύρη τάσης φόρτισης / εκφόρτισης (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
-                "unknown": "Αγνωστος",
-                "ok": "ΕΝΤΑΞΕΙ",
+                "unknown": "Άγνωστη",
+                "ok": "Κανονική",
                 "low_voltage": "Χαμηλή τάση",
-                "under_voltage": "Πολύ χαμηλή τάση",
-                "charging": "Προσγείωση",
-                "idle": "Αεργος",
-                "discharging": "Εκφόρτωση",
-                "over_voltage": "Πολύ υψηλή τάση"
+                "under_voltage": "Υπόταση",
+                "charging": "Φόρτιση",
+                "idle": "Αδράνεια",
+                "discharging": "Εκφόρτιση",
+                "over_voltage": "Υπέρταση"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "Η κατάσταση του OK ξεκίνησε",
-            "start_low_voltage": "Έχει αρχίσει η χαμηλή τάση",
-            "under_voltage": "Πολύ χαμηλή τάση",
-            "start_discharging": "Η εκφόρτωση έχει αρχίσει",
-            "start_idle": "Η λειτουργία αδράνειας έχει αρχίσει",
-            "start_charging": "Ξεκίνησε η φόρτιση",
-            "over_voltage": "Πολύ υψηλή τάση",
-            "state_changed": "Το κράτος έχει αλλάξει"
+            "start_ok": "Γίνεται κανονική",
+            "start_low_voltage": "Πέφτει σε χαμηλή τάση",
+            "under_voltage": "Πέφτει σε υπόταση",
+            "start_discharging": "Αρχίζει εκφόρτιση",
+            "start_idle": "Μεταβαίνει σε αδράνεια",
+            "start_charging": "Αρχίζει φόρτιση",
+            "over_voltage": "Μεταβαίνει σε υπέρταση",
+            "state_changed": "Η κατάσταση αλλάζει"
         }
     }
 }

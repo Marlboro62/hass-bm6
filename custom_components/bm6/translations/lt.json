@@ -11,7 +11,8 @@
                     "update_interval": "Duomenų atnaujinimo intervalas",
                     "voltage_offset": "Įtampos korekcija",
                     "temperature_offset": "Temperatūros korekcija",
-                    "temperature_unit": "Temperatūros vienetas"
+                    "temperature_unit": "Temperatūros vienetas",
+                    "bluetooth_proxy": "Bluetooth tarpinis serveris"
                 }
             },
             "custom_calculation": {
@@ -26,14 +27,14 @@
                 "title": "BM6 monitoriaus konfigūracija",
                 "description": "Pasirinktiniai akumuliatoriaus konfigūracijos parametrai.",
                 "data": {
-                    "custom_dvr_min": "Minimali iškrovimo įtampa (DVR)",
-                    "custom_dvr_max": "Maksimali iškrovimo įtampa (DVR)",
-                    "custom_cvr_min": "Minimali įkrovimo įtampa (CVR)",
-                    "custom_cvr_max": "Maksimali įkrovimo įtampa (CVR)",
-                    "custom_soc_min": "Minimali įkrovos įtampa (SOC)",
-                    "custom_soc_max": "Maksimali įkrovos įtampa (SOC)",
-                    "custom_sod_min": "Minimali išleidimo įtampa (SOD)",
-                    "custom_sod_max": "Maksimali įkrovos įtampa (SOD)"
+                    "custom_dvr_min": "Iškrovimo intervalas (DVR): mažiausia įtampa",
+                    "custom_dvr_max": "Iškrovimo intervalas (DVR): didžiausia įtampa",
+                    "custom_cvr_min": "Įkrovimo intervalas (CVR): mažiausia įtampa",
+                    "custom_cvr_max": "Įkrovimo intervalas (CVR): didžiausia įtampa",
+                    "custom_soc_min": "Įkrovos būsena (SoC): mažiausia įtampa",
+                    "custom_soc_max": "Įkrovos būsena (SoC): didžiausia įtampa",
+                    "custom_sod_min": "Iškrovos būsena (SoD): mažiausia įtampa",
+                    "custom_sod_max": "Iškrovos būsena (SoD): didžiausia įtampa"
                 }
             }
         },
@@ -56,7 +57,8 @@
                     "update_interval": "Duomenų atnaujinimo intervalas",
                     "voltage_offset": "Įtampos korekcija",
                     "temperature_offset": "Temperatūros korekcija",
-                    "temperature_unit": "Temperatūros vienetas"
+                    "temperature_unit": "Temperatūros vienetas",
+                    "bluetooth_proxy": "Bluetooth tarpinis serveris"
                 }
             },
             "custom_calculation": {
@@ -71,14 +73,14 @@
                 "title": "BM6 monitoriaus konfigūracija",
                 "description": "Pasirinktiniai akumuliatoriaus konfigūracijos parametrai.",
                 "data": {
-                    "custom_dvr_min": "Minimali iškrovimo įtampa (DVR)",
-                    "custom_dvr_max": "Maksimali iškrovimo įtampa (DVR)",
-                    "custom_cvr_min": "Minimali įkrovimo įtampa (CVR)",
-                    "custom_cvr_max": "Maksimali įkrovimo įtampa (CVR)",
-                    "custom_soc_min": "Minimali įkrovos įtampa (SOC)",
-                    "custom_soc_max": "Maksimali įkrovos įtampa (SOC)",
-                    "custom_sod_min": "Minimali išleidimo įtampa (SOD)",
-                    "custom_sod_max": "Maksimali įkrovos įtampa (SOD)"
+                    "custom_dvr_min": "Iškrovimo intervalas (DVR): mažiausia įtampa",
+                    "custom_dvr_max": "Iškrovimo intervalas (DVR): didžiausia įtampa",
+                    "custom_cvr_min": "Įkrovimo intervalas (CVR): mažiausia įtampa",
+                    "custom_cvr_max": "Įkrovimo intervalas (CVR): didžiausia įtampa",
+                    "custom_soc_min": "Įkrovos būsena (SoC): mažiausia įtampa",
+                    "custom_soc_max": "Įkrovos būsena (SoC): didžiausia įtampa",
+                    "custom_sod_min": "Iškrovos būsena (SoD): mažiausia įtampa",
+                    "custom_sod_max": "Iškrovos būsena (SoD): didžiausia įtampa"
                 }
             }
         },
@@ -96,7 +98,7 @@
                 "name": "Įtampa",
                 "state_attributes": {
                     "voltage_device": {
-                        "name": "Faktinė įtampa"
+                        "name": "Išmatuota įtampa"
                     },
                     "voltage_corrected": {
                         "name": "Pataisyta įtampa"
@@ -107,7 +109,7 @@
                 "name": "Temperatūra",
                 "state_attributes": {
                     "temperature_device": {
-                        "name": "Faktinė temperatūra"
+                        "name": "Išmatuota temperatūra"
                     },
                     "temperature_corrected": {
                         "name": "Pataisyta temperatūra"
@@ -118,138 +120,138 @@
                 }
             },
             "percentage": {
-                "name": "Procentas",
+                "name": "Įkrova",
                 "state_attributes": {
                     "voltage_corrected": {
                         "name": "Pataisyta įtampa"
                     },
                     "percentage": {
-                        "name": "Procentas"
+                        "name": "Įkrova"
                     },
                     "state_algorithm": {
                         "name": "Akumuliatoriaus skaičiavimo algoritmas",
                         "state": {
-                            "by_device": "Apskaičiuota pagal BM6 įrenginį",
-                            "soc_sod": "Apskaičiuota pagal įkrovos/išleidimo būseną (SOC/SOD)",
-                            "cvr_dvr": "Apskaičiuota įkrovimo/išleidimo įtampoje (CVR/DVR)"
+                            "by_device": "Pateikia BM6",
+                            "soc_sod": "Įkrovos / iškrovos būsena (SoC/SoD)",
+                            "cvr_dvr": "Įkrovimo / iškrovimo įtampos intervalai (CVR/DVR)"
                         }
                     },
                     "dvr_min": {
-                        "name": "Minimali iškrovimo įtampa (DVR)"
+                        "name": "Iškrovimo intervalas (DVR): mažiausia įtampa"
                     },
                     "dvr_max": {
-                        "name": "Maksimali iškrovimo įtampa (DVR)"
+                        "name": "Iškrovimo intervalas (DVR): didžiausia įtampa"
                     },
                     "cvr_min": {
-                        "name": "Minimali įkrovimo įtampa (CVR)"
+                        "name": "Įkrovimo intervalas (CVR): mažiausia įtampa"
                     },
                     "cvr_max": {
-                        "name": "Maksimali įkrovimo įtampa (CVR)"
+                        "name": "Įkrovimo intervalas (CVR): didžiausia įtampa"
                     },
                     "sod_min": {
-                        "name": "Minimali išleidimo įtampa (SOD)"
+                        "name": "Iškrovos būsena (SoD): mažiausia įtampa"
                     },
                     "sod_max": {
-                        "name": "Maksimali įkrovos įtampa (SOD)"
+                        "name": "Iškrovos būsena (SoD): didžiausia įtampa"
                     },
                     "soc_min": {
-                        "name": "Minimali įkrovos įtampa (SOC)"
+                        "name": "Įkrovos būsena (SoC): mažiausia įtampa"
                     },
                     "soc_max": {
-                        "name": "Maksimali įkrovos įtampa (SOC)"
+                        "name": "Įkrovos būsena (SoC): didžiausia įtampa"
                     }
                 }
             },
             "state": {
-                "name": "Stano",
+                "name": "Būsena",
                 "state": {
                     "unknown": "Nežinoma",
-                    "ok": "Gerai",
+                    "ok": "Normali",
                     "low_voltage": "Žema įtampa",
                     "under_voltage": "Per žema įtampa",
-                    "charging": "Nusileidimas",
-                    "idle": "Tuščioji",
-                    "discharging": "Iškrauti",
+                    "charging": "Kraunama",
+                    "idle": "Ramybė",
+                    "discharging": "Iškraunama",
                     "over_voltage": "Per aukšta įtampa"
                 }
             },
             "rssi": {
-                "name": "Signalo jėga (RSSI)"
+                "name": "Signalo stiprumas"
             },
             "device_percentage": {
-                "name": "Įrenginio procentas"
+                "name": "Įkrova (BM6)"
             },
             "device_state": {
-                "name": "Įrenginio būklė",
+                "name": "Būsena (BM6)",
                 "state": {
                     "unknown": "Nežinoma",
-                    "ok": "Gerai",
+                    "ok": "Normali",
                     "low_voltage": "Žema įtampa",
-                    "charging": "Nusileidimas"
+                    "charging": "Kraunama"
                 }
             },
             "rapid_acceleration": {
-                "name": "Pagreitis"
+                "name": "Staigus įtampos padidėjimas"
             },
             "rapid_deceleration": {
-                "name": "Lėtumas"
+                "name": "Staigus įtampos sumažėjimas"
             },
             "bluetooth_scanner": {
-                "name": "„Skaner Bluetooth“"
+                "name": "Bluetooth skeneris"
             }
         }
     },
     "selector": {
         "battery_voltage": {
             "options": {
-                "6v": "6 voltas",
-                "12v": "12 voltų"
+                "6v": "6 V",
+                "12v": "12 V"
             }
         },
         "battery_type": {
             "options": {
-                "fla": "Užtvindytas rūgšties alley (FLA)",
-                "agm": "Sugeriantis stiklo kilimėlis (AGM)",
-                "gel": "Gelio ląstelės (gelis)",
-                "nicd": "Nikelis-kadmia (NICD)",
-                "nimh": "Nikelio-metalo vanduo (NIMH)",
-                "liion": "Ličio jonas (ličio jonas)",
-                "lifepo4": "Ličio geležies fosfatas (LIFEPO4)",
-                "lto": "Mažasis titanietis (LTO)",
-                "custom": "Nestandartinis akumuliatorius",
-                "efb": "Enhanced flooded battery (EFB)"
+                "fla": "Atviras švino rūgšties (FLA)",
+                "agm": "AGM (stiklo pluošto)",
+                "gel": "Gelinis",
+                "efb": "EFB (start-stop)",
+                "nicd": "Nikelio-kadmio (NiCd)",
+                "nimh": "Nikelio-metalo hidrido (NiMH)",
+                "liion": "Ličio jonų (Li-ion)",
+                "lifepo4": "Ličio geležies fosfato (LiFePO4)",
+                "lto": "Ličio titanato (LTO)",
+                "custom": "Pasirinktinis"
             }
         },
         "battery_state_algorithm": {
             "options": {
-                "by_device": "Uždarytas pagal BM6 įrenginį",
-                "soc_sod": "Auceptorius iš pakeitimo/siuntimo būsenos (SOC/SOD)",
-                "cvr_dvr": "„Flecple Charaction“/siuntimo laikas (CVR/DVR)"
+                "by_device": "Pateikia BM6",
+                "soc_sod": "Įkrovos / iškrovos būsena (SoC/SoD)",
+                "cvr_dvr": "Įkrovimo / iškrovimo įtampos intervalai (CVR/DVR)"
             }
         },
         "battery_state": {
             "options": {
                 "unknown": "Nežinoma",
-                "ok": "Gerai",
+                "ok": "Normali",
                 "low_voltage": "Žema įtampa",
                 "under_voltage": "Per žema įtampa",
-                "charging": "Nusileidimas",
-                "idle": "Tuščioji",
-                "discharging": "Iškrauti",
+                "charging": "Kraunama",
+                "idle": "Ramybė",
+                "discharging": "Iškraunama",
                 "over_voltage": "Per aukšta įtampa"
             }
         }
     },
     "device_automation": {
         "trigger_type": {
-            "start_ok": "Prasidėjo gerai",
-            "start_low_voltage": "Pradėta žemos įtampos",
-            "under_voltage": "Per žema įtampa",
-            "start_discharging": "Pradėjo iškrauti",
-            "start_idle": "Naudojamasis režimas prasidėjo",
-            "start_charging": "Prasidėjo įkrovimas",
-            "over_voltage": "Per aukšta įtampa",
-            "state_changed": "Valstybė pasikeitė"
+            "start_ok": "Tampa normali",
+            "start_low_voltage": "Įtampa tampa žema",
+            "under_voltage": "Įtampa tampa per žema",
+            "start_discharging": "Pradeda išsikrauti",
+            "start_idle": "Pereina į ramybę",
+            "start_charging": "Pradeda krautis",
+            "over_voltage": "Įtampa tampa per aukšta",
+            "state_changed": "Būsena pasikeičia"
         }
     }
 }
