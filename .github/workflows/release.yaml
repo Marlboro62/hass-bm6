@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -16,14 +17,22 @@ jobs:
       - name: "Récupérer le dépôt"
         uses: "actions/checkout@v4"
 
+      - name: "Déterminer le tag"
+        run: |
+          if [ "$GITHUB_REF_TYPE" = "tag" ]; then
+            echo "TAG=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
+          else
+            echo "TAG=v$(jq -r .version custom_components/bm6/manifest.json)" >> "$GITHUB_ENV"
+          fi
+
       - name: "Vérifier que le tag correspond à la version"
         run: |
-          tag="${GITHUB_REF_NAME#v}"
+          tag="${TAG#v}"
           manifest=$(jq -r .version custom_components/bm6/manifest.json)
           const=$(sed -n 's/^VERSION = "\(.*\)"/\1/p' custom_components/bm6/const.py)
           echo "tag=$tag manifest=$manifest const=$const"
           if [ "$tag" != "$manifest" ] || [ "$tag" != "$const" ]; then
-            echo "::error::Le tag $GITHUB_REF_NAME ne correspond pas à manifest.json ($manifest) / const.py ($const)"
+            echo "::error::Le tag $TAG ne correspond pas à manifest.json ($manifest) / const.py ($const)"
             exit 1
           fi
 
@@ -31,9 +40,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          notes=".github/release-notes/${GITHUB_REF_NAME}.md"
+          notes=".github/release-notes/${TAG}.md"
           if [ -f "$notes" ]; then
-            gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --notes-file "$notes"
+            gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --notes-file "$notes"
           else
-            gh release create "$GITHUB_REF_NAME" --title "$GITHUB_REF_NAME" --generate-notes
+            gh release create "$TAG" --target "$GITHUB_SHA" --title "$TAG" --generate-notes
           fi
