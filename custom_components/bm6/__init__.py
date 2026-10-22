@@ -62,6 +62,14 @@ async def async_setup_entry(
     entry.runtime_data = BM6Data(coordinator)
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     entry.async_on_unload(entry.add_update_listener(async_reload_entry))
+    # Première lecture en tâche de fond : une connexion Bluetooth lente ou un BM6
+    # hors de portée ne retarde plus le démarrage de Home Assistant. La tâche est
+    # annulée automatiquement si l'entrée est déchargée.
+    entry.async_create_background_task(
+        hass,
+        coordinator.async_refresh(),
+        name=f"{entry.domain}_first_refresh_{entry.entry_id}",
+    )
     return True
 
 

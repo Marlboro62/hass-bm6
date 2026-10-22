@@ -74,8 +74,11 @@ async def async_setup_entry(
     async_add_entities: AddEntitiesCallback,
 ) -> None:
     """Set up BM6 sensors based on a config entry."""
+    # Pas de lecture Bluetooth ici : elle peut durer plus de 60 s si le BM6 est hors
+    # de portée et bloquerait le démarrage de Home Assistant. La première lecture est
+    # lancée en tâche de fond par async_setup_entry (__init__.py) ; les capteurs
+    # restent « inconnu » jusqu'à son arrivée.
     coordinator = config_entry.runtime_data.coordinator
-    await coordinator.async_refresh()
 
     entities = [
         BM6VoltageSensor(coordinator),
@@ -197,6 +200,8 @@ class BM6TemperatureSensor(BM6SensorEntity):
 
     @property
     def extra_state_attributes(self) -> Dict[str, Any]:
+        if self.coordinator.data is None:
+            return {}
         return {
             key: self.coordinator.data.get(key)
             for key in [
@@ -229,6 +234,8 @@ class BM6PercentageSensor(BM6SensorEntity):
 
     @property
     def extra_state_attributes(self) -> Dict[str, Any]:
+        if self.coordinator.data is None:
+            return {}
         return {
             key: self.coordinator.data.get(key)
             for key in [
