@@ -8,7 +8,7 @@ NAME = "Battery Monitor BM6"
 DOMAIN = "bm6"
 
 # NOTE: garder cette valeur synchronisée avec "version" dans manifest.json
-VERSION = "2027.1.2"
+VERSION = "2027.1.3"
 MIN_REQUIRED_HA_VERSION = "2026.10.0"
 
 PLATFORMS: set[Platform] = {Platform.SENSOR}
