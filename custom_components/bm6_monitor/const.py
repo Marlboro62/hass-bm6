@@ -5,10 +5,10 @@ from __future__ import annotations
 from homeassistant.const import Platform, UnitOfTemperature
 
 NAME = "Battery Monitor BM6"
-DOMAIN = "bm6"
+DOMAIN = "bm6_monitor"
 
 # NOTE: garder cette valeur synchronisée avec "version" dans manifest.json
-VERSION = "2027.1.3"
+VERSION = "2027.2.0"
 MIN_REQUIRED_HA_VERSION = "2026.10.0"
 
 PLATFORMS: set[Platform] = {Platform.SENSOR}
