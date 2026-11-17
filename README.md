@@ -75,11 +75,17 @@ Copiez le dossier `custom_components/battery_monitor_bm6` dans le dossier `custo
 
 Depuis la version **2027.2.0**, le domaine de l'intégration est `battery_monitor_bm6` (auparavant `bm6`, comme l'intégration d'origine). Pour Home Assistant, c'est une nouvelle intégration : vos BM6 doivent être ajoutés de nouveau.
 
+La Marketplace (ou HACS) refuse la simple mise à jour et affiche :
+*« Marlboro62/hass-bm6 changed its domain from bm6 to battery_monitor_bm6, uninstall it and install it again. »*
+C'est normal : il faut désinstaller puis réinstaller.
+
 1. Faites une sauvegarde.
-2. Supprimez vos BM6 dans l'ancienne intégration (**Paramètres → Appareils et services**).
-3. Mettez à jour (ou installez) **Battery Monitor BM6**, puis redémarrez Home Assistant.
-4. Ajoutez vos BM6 dans **Battery Monitor BM6** : ils sont aussi découverts automatiquement.
-5. Les entités sont recréées : mettez à jour vos tableaux de bord et automatisations si leurs noms ont changé.
+2. Supprimez vos BM6 de l'ancienne intégration : **Paramètres → Appareils et services → Battery Monitor BM6 → ⋮ → Supprimer**.
+3. Désinstallez l'ancienne version : **Paramètres → Marketplace**, cherchez `hass-bm6`, **⋮ → Désinstaller** (avec HACS : même menu dans HACS).
+4. Redémarrez Home Assistant.
+5. Réinstallez **Battery Monitor BM6** depuis la Marketplace (voir [Installation](#installation)), puis redémarrez Home Assistant.
+6. Ajoutez vos BM6 : ils sont découverts automatiquement, ou **Ajouter une intégration → Battery Monitor BM6**.
+7. Les entités sont recréées : mettez à jour vos tableaux de bord et automatisations si leurs noms ont changé.
 
 Si l'ancien dossier `custom_components/bm6` est resté, supprimez-le, sauf si vous utilisez aussi Rafciq/BM6.
 
