@@ -1,5 +1,5 @@
 <p>
-  ☕ <strong>Si cette carte vous est utile, vous pouvez soutenir le projet :</strong>
+  ☕ <strong>Si cette intégration vous est utile, vous pouvez soutenir le projet :</strong>
 </p>
 
 <div style="white-space: nowrap; line-height: 0;">
@@ -30,13 +30,13 @@
 
 ![Licence](https://img.shields.io/github/license/Marlboro62/hass-bm6)
 ![Version](https://img.shields.io/github/v/release/Marlboro62/hass-bm6)
-[![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz)
+[![Marketplace](https://img.shields.io/badge/Marketplace-Custom-41BDF5.svg)](https://www.home-assistant.io/integrations/marketplace/)
 
 <img src="images/icon.png" alt="Icône" width="96" align="right">
 
 Intégration personnalisée [Home Assistant](https://www.home-assistant.io) pour le moniteur de batterie Bluetooth **BM6**. Elle lit la tension, la température, le pourcentage et l'état de la batterie via un adaptateur Bluetooth ou un proxy ESPHome.
 
-Ce dépôt est un fork de [Rafciq/BM6](https://github.com/Rafciq/BM6), sous licence MIT.
+Ce dépôt est un fork de [Rafciq/BM6](https://github.com/Rafciq/BM6), sous licence MIT. Il a son propre domaine, `battery_monitor_bm6` : il peut donc être installé à côté de l'intégration d'origine (domaine `bm6`).
 
 > ⚠️ Vous utilisez cette intégration à vos propres risques. L'auteur n'est pas responsable des dommages liés à son utilisation.
 
@@ -55,19 +55,35 @@ Ce dépôt est un fork de [Rafciq/BM6](https://github.com/Rafciq/BM6), sous lice
 
 ## Installation
 
-### Avec HACS
+### Avec la Marketplace (Home Assistant 2026.11 et plus récent)
+
+1. **Paramètres → Marketplace**, puis **Add from link** (en haut à droite).
+2. Collez `https://github.com/Marlboro62/hass-bm6` et choisissez le type **Integration**.
+3. Installez **Battery Monitor BM6**, puis redémarrez Home Assistant.
+
+### Avec HACS (Home Assistant 2026.10)
 
 1. Dans HACS, ouvrez le menu ⋮ en haut à droite, puis **Dépôts personnalisés**.
 2. Ajoutez `https://github.com/Marlboro62/hass-bm6` avec le type **Intégration**.
-3. Installez **Battery Monitor BM6** puis redémarrez Home Assistant.
+3. Installez **Battery Monitor BM6**, puis redémarrez Home Assistant.
 
 ### Manuellement
 
 Copiez le dossier `custom_components/battery_monitor_bm6` dans le dossier `custom_components` de votre configuration, puis redémarrez Home Assistant.
 
-> Depuis la version 2027.2.0, cette intégration a son propre domaine, `battery_monitor_bm6` : elle peut être installée à côté de l'intégration d'origine (Rafciq/BM6), qui utilise le domaine `bm6`. Ne configurez pas le même BM6 dans les deux à la fois : il n'accepte qu'une connexion Bluetooth à la fois.
->
-> **Vous venez d'une version 2027.1.x de ce fork, ou de Rafciq/BM6 ?** Supprimez l'appareil dans l'ancienne intégration, redémarrez, puis ajoutez-le dans **Battery Monitor BM6**. Les entités sont recréées : pensez à mettre à jour vos tableaux de bord et automatisations.
+## Mise à jour depuis 2027.1.x ou depuis Rafciq/BM6
+
+Depuis la version **2027.2.0**, le domaine de l'intégration est `battery_monitor_bm6` (auparavant `bm6`, comme l'intégration d'origine). Pour Home Assistant, c'est une nouvelle intégration : vos BM6 doivent être ajoutés de nouveau.
+
+1. Faites une sauvegarde.
+2. Supprimez vos BM6 dans l'ancienne intégration (**Paramètres → Appareils et services**).
+3. Mettez à jour (ou installez) **Battery Monitor BM6**, puis redémarrez Home Assistant.
+4. Ajoutez vos BM6 dans **Battery Monitor BM6** : ils sont aussi découverts automatiquement.
+5. Les entités sont recréées : mettez à jour vos tableaux de bord et automatisations si leurs noms ont changé.
+
+Si l'ancien dossier `custom_components/bm6` est resté, supprimez-le, sauf si vous utilisez aussi Rafciq/BM6.
+
+> Les deux intégrations peuvent être installées côte à côte, mais ne configurez pas le même BM6 dans les deux à la fois : il n'accepte qu'une connexion Bluetooth à la fois.
 
 ## Configuration
 
