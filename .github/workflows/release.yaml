@@ -22,14 +22,14 @@ jobs:
           if [ "$GITHUB_REF_TYPE" = "tag" ]; then
             echo "TAG=$GITHUB_REF_NAME" >> "$GITHUB_ENV"
           else
-            echo "TAG=v$(jq -r .version custom_components/bm6_monitor/manifest.json)" >> "$GITHUB_ENV"
+            echo "TAG=v$(jq -r .version custom_components/battery_monitor_bm6/manifest.json)" >> "$GITHUB_ENV"
           fi
 
       - name: "Vérifier que le tag correspond à la version"
         run: |
           tag="${TAG#v}"
-          manifest=$(jq -r .version custom_components/bm6_monitor/manifest.json)
-          const=$(sed -n 's/^VERSION = "\(.*\)"/\1/p' custom_components/bm6_monitor/const.py)
+          manifest=$(jq -r .version custom_components/battery_monitor_bm6/manifest.json)
+          const=$(sed -n 's/^VERSION = "\(.*\)"/\1/p' custom_components/battery_monitor_bm6/const.py)
           echo "tag=$tag manifest=$manifest const=$const"
           if [ "$tag" != "$manifest" ] || [ "$tag" != "$const" ]; then
             echo "::error::Le tag $TAG ne correspond pas à manifest.json ($manifest) / const.py ($const)"

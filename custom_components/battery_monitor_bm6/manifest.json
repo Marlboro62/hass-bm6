@@ -1,5 +1,5 @@
 {
-  "domain": "bm6_monitor",
+  "domain": "battery_monitor_bm6",
   "name": "Battery Monitor BM6",
   "bluetooth": [
     {
