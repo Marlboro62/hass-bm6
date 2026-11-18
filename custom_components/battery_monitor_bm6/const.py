@@ -8,7 +8,7 @@ NAME = "Battery Monitor BM6"
 DOMAIN = "battery_monitor_bm6"
 
 # NOTE: garder cette valeur synchronisée avec "version" dans manifest.json
-VERSION = "2027.2.0"
+VERSION = "2027.2.1-rc.1"
 MIN_REQUIRED_HA_VERSION = "2026.10.0"
 
 PLATFORMS: set[Platform] = {Platform.SENSOR}
@@ -40,6 +40,14 @@ CRYPT_KEY = bytearray(
 
 # Timeout for the Bleak client, in seconds
 BLEAK_CLIENT_TIMEOUT = 20
+# Une seule tentative de connexion par proxy, et une pause avant le proxy suivant : des essais rapprochés
+# arrivent pendant que le proxy ESPHome termine le précédent (« gatt_connect wrong state »), et le proxy
+# coupe alors sa liaison avec Home Assistant
+CONNECT_ATTEMPTS = 1
+PROXY_SETTLE_SECONDS = 5
+# Après des échecs, lecture suivante espacée : 1, 2, 4, 8 puis 15 fois l'intervalle (30 min au plus)
+BACKOFF_FACTORS = (1, 2, 4, 8, 15)
+MAX_BACKOFF_SECONDS = 1800
 
 # Configuration keys
 CONF_DEVICE_ADDRESS = "device_address"

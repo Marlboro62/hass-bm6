@@ -20,6 +20,8 @@ from homeassistant.core import HomeAssistant
 
 from .const import (
     BLEAK_CLIENT_TIMEOUT,
+    CONNECT_ATTEMPTS,
+    PROXY_SETTLE_SECONDS,
     CHARACTERISTIC_UUID_NOTIFY,
     CHARACTERISTIC_UUID_WRITE,
     CRYPT_KEY,
@@ -216,8 +218,11 @@ class BM6Connector:
         """Retrieve data from the BM6 device."""
         exceptions: list[Exception] = []
 
-        for scanner in self._scanners:
+        for index, scanner in enumerate(self._scanners):
             scanner_name = scanner.scanner.name
+            if index:
+                # laisser le proxy précédent terminer sa tentative avant d'en lancer une autre
+                await asyncio.sleep(PROXY_SETTLE_SECONDS)
             _LOGGER.debug(
                 "Start getting data from BM6 %s via scanner %s (source %s)",
                 self._address,
@@ -236,6 +241,7 @@ class BM6Connector:
                     scanner_name,
                     timeout=BLEAK_CLIENT_TIMEOUT,
                     use_services_cache=False,
+                    max_attempts=CONNECT_ATTEMPTS,
                 )
 
                 try:

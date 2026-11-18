@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import time
 from datetime import timedelta
 from typing import TYPE_CHECKING
 
@@ -12,6 +13,8 @@ from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, Upda
 from .battery import Battery
 from .bm6_connect import BM6Connector, BM6Data, BM6DeviceError
 from .const import (
+    BACKOFF_FACTORS,
+    MAX_BACKOFF_SECONDS,
     AUTO_PROXY_SOURCE,
     CONF_BLUETOOTH_PROXY,
     CONF_DEVICE_ADDRESS,
@@ -68,6 +71,10 @@ class BM6DataUpdateCoordinator(DataUpdateCoordinator):
             else configured_proxy
         )
 
+        # échecs successifs et moment (horloge monotone) avant lequel aucune lecture n'est tentée
+        self._failures = 0
+        self._next_attempt: float | None = None
+
         super().__init__(
             hass,
             _LOGGER,
@@ -77,8 +84,34 @@ class BM6DataUpdateCoordinator(DataUpdateCoordinator):
             ),
         )
 
+    def _record_failure(self) -> None:
+        """Échec : la lecture suivante est repoussée de plus en plus (jusqu'à MAX_BACKOFF_SECONDS)."""
+        self._failures += 1
+        factor = BACKOFF_FACTORS[min(self._failures, len(BACKOFF_FACTORS)) - 1]
+        interval = self.update_interval.total_seconds() if self.update_interval else 120
+        delay = min(interval * factor, MAX_BACKOFF_SECONDS)
+        # un peu moins que le délai : la lecture planifiée qui tombe juste après l'échéance n'est pas sautée
+        self._next_attempt = time.monotonic() + max(0.0, delay - min(interval / 2, 30))
+
     async def _async_update_data(self) -> dict:
         """Fetch data from the BM6 device."""
+        # échecs récents : ne pas solliciter de nouveau les proxys avant le moment prévu (rien de journalisé)
+        if self._next_attempt is not None and time.monotonic() < self._next_attempt:
+            raise UpdateFailed(
+                f"BM6 {self.device_address} : lecture en attente après {self._failures} échec(s), "
+                f"nouvel essai dans {int(self._next_attempt - time.monotonic())} s"
+            )
+        try:
+            data = await self._read()
+        except UpdateFailed:
+            self._record_failure()
+            raise
+        self._failures = 0
+        self._next_attempt = None
+        return data
+
+    async def _read(self) -> dict:
+        """Lecture du BM6 (une connexion)."""
         try:
             connector = BM6Connector(
                 hass=self.hass,
